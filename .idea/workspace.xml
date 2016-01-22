@@ -9,10 +9,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76a4c372-4b0f-45d6-b3b6-88b28d3abc42" name="Default" comment="Connecting to Google Location API">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO" afterPath="$PROJECT_DIR$/TODO" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/design_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/design_23_1_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_1_1.xml" />
+    <list default="true" id="76a4c372-4b0f-45d6-b3b6-88b28d3abc42" name="Default" comment="get last location">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="5dacca39-e978-4a88-a6ce-bce9bd334795" name="Rejected commit: Default" comment="Connecting to Google Location API" />
@@ -108,8 +106,10 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.33183858">
-              <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-              <folding />
+              <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1899,7 +1899,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="TODO&#9;FILE&#9;file:///Users/vmax/hsedorms/TODO" />
+    <property name="SearchEverywhereHistoryKey" value="Main&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/MainActivity.java&#10;TODO&#9;FILE&#9;file:///Users/vmax/hsedorms/TODO" />
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -2066,7 +2066,19 @@
       <option name="project" value="LOCAL" />
       <updated>1453462962569</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="automatic IDE changes &amp; TODO">
+      <created>1453462982584</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1453462982584</updated>
+    </task>
+    <task id="LOCAL-00006" summary="correctly disconnect from API">
+      <created>1453463054921</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1453463054921</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2122,7 +2134,10 @@
     <MESSAGE value="Needed libraries&#10;" />
     <MESSAGE value="Locations for HSE campuses &amp; dorms&#10;" />
     <MESSAGE value="Connecting to Google Location API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connecting to Google Location API" />
+    <MESSAGE value="automatic IDE changes &amp; TODO" />
+    <MESSAGE value="correctly disconnect from API" />
+    <MESSAGE value="get last location" />
+    <option name="LAST_COMMIT_MESSAGE" value="get last location" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2194,7 +2209,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2293,14 +2310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TODO">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2321,11 +2330,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TODO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33183858">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

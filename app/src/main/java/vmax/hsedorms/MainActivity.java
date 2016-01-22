@@ -1,8 +1,12 @@
 package vmax.hsedorms;
 
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.Manifest.permission;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -12,6 +16,9 @@ public class MainActivity extends AppCompatActivity
         implements GoogleApiClient.ConnectionCallbacks,
                     GoogleApiClient.OnConnectionFailedListener{
 
+
+    Location lastKnownLocation;
+
     GoogleApiClient googleApiClient;
 
     @Override
@@ -19,6 +26,8 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    // Couldn't connect to Google Location API
+    // Probably, there are no Google Play Services on the device
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
@@ -26,7 +35,14 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onConnected(Bundle bundle) {
-
+        int isPermitted = ContextCompat.checkSelfPermission(this, permission.ACCESS_FINE_LOCATION);
+        if (PackageManager.PERMISSION_GRANTED == isPermitted) {
+            lastKnownLocation = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
+        } else
+        {
+            // we are not permitted to get location
+            // TODO: ask for it or ask the current location
+        }
     }
 
     @Override
