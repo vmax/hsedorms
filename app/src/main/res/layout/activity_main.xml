@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/places_ic_search"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:layout_gravity="end|bottom"
+        android:id="@+id/fabGo"/>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,6 +21,108 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="vmax.hsedorms.MainActivity">
+    android:orientation="vertical"
+    tools:context="vmax.hsedorms.MainActivity"
+    android:weightSum="1">
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="@string/youAreNear"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/departure"
+        android:gravity="center"
+        android:text="@string/detectingLocation"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/detectedLocationIsWrong"
+        android:id="@+id/departureIsIncorrect"
+        android:gravity="right"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:text="Пункт назначения:"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/arrivalSelector"/>
+       <!-- style="@android:style/Widget.DeviceDefault.Spinner" -->
+
+    <info.hoang8f.android.segmented.SegmentedGroup
+        xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        segmentedgroup:sc_border_width="2dp"
+        segmentedgroup:sc_corner_radius="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/dateSelector">
+
+        <RadioButton
+            android:id="@+id/dateToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dateToday"
+            android:textAllCaps="true"
+            android:layout_weight="1"
+            style="@style/RadioButton"/>
+
+        <RadioButton
+            android:id="@+id/dateNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dateNow"
+            android:textAllCaps="true"
+            android:layout_weight="1"
+            android:checked="true"
+            style="@style/RadioButton"/>
+
+        <RadioButton
+            android:id="@+id/dateTomorrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dateTomorrow"
+            android:textAllCaps="true"
+            android:layout_weight="1"
+            style="@style/RadioButton"/>
+
+    </info.hoang8f.android.segmented.SegmentedGroup>
+
+    <TextView
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:text="Время:"
+        android:id="@+id/timeSelectorTitle"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <Spinner
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeSelector"
+        style="@android:style/Widget.DeviceDefault.Spinner"/>
+
+
+</LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Общежития ВШЭ</string>
+    <string name="dateToday">Сегодня</string>
+    <string name="dateNow">Сейчас</string>
+    <string name="dateTomorrow">Завтра</string>
+    <string name="youAreNear">Вы недалеко от:</string>
+    <string name="detectingLocation">определение местоположения</string>
+    <string name="detectedLocationIsWrong">Это не так?</string>
 </resources>

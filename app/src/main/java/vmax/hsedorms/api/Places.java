@@ -1,7 +1,17 @@
-package vmax.hsedorms;
+package vmax.hsedorms.api;
 
+import android.content.Context;
 import android.location.Location;
 import android.util.Pair;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+import java.util.List;
+
+import vmax.hsedorms.R;
 
 public class Places {
     public final static Place aeroport, tekstilshiki, strogino, myasnitskaya;
@@ -10,6 +20,7 @@ public class Places {
     public final static Place trehsvyat_m, hitra, gnezdo;
     public final static Place dubki, odintsovo;
     public final static Place[] Edus, Dorms,  AllPlaces;
+
 
     static
     {
@@ -52,13 +63,17 @@ public class Places {
     }
 
 
+    // TODO: do we need to check that distance is reasonable (<1km)?
     public static Place getNearestPlace(Location currentLocation)
     {
-        Place result = aeroport; // choose the first element to start searching
+        float distance = Float.MAX_VALUE;
+        Place result = null;
         for (Place p: AllPlaces) {
-            if (currentLocation.distanceTo(p.location) < currentLocation.distanceTo(result.location))
+            float new_distance = currentLocation.distanceTo(p.location);
+            if (new_distance < distance)
             {
                 result = p;
+                distance = new_distance;
             }
         }
         return result;
@@ -76,6 +91,7 @@ public class Places {
             this.location.setLatitude(latlon.first);
             this.location.setLongitude(latlon.second);
         }
+
 
         @Override
         public String toString() {
