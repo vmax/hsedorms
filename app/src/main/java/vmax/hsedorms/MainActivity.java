@@ -269,9 +269,6 @@ public class MainActivity extends AppCompatActivity
             Log.d("hsedorms", "no last location");
             showDepartureChooserDialog();
 
-//            lastKnownLocation = new Location("");
-  //          lastKnownLocation.setLatitude(55.845137);
-    //        lastKnownLocation.setLongitude(37.564186);
         }
         else
         {
