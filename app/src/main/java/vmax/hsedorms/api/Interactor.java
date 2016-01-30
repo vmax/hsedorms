@@ -230,6 +230,7 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
         }
         catch (MalformedURLException ex)
         {
+            Log.d("hsedorms/Interactor", ":MalformedURLException " + ex.getMessage());
             // shouldn't happen as we have fixed known URL
         } catch (IOException ex)
         {

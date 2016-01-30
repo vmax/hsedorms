@@ -15,6 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.concurrent.ExecutionException;
 
 import vmax.hsedorms.api.Interactor;
@@ -28,6 +30,9 @@ public class RouteActivity extends AppCompatActivity {
     public void displayRoute(@NonNull Route route)
     {
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        TextView tv = (TextView) findViewById(R.id.smth);
+        tv.setText(route.toString());
     }
 
 
@@ -52,7 +57,6 @@ public class RouteActivity extends AppCompatActivity {
 
 
         new Interactor(this).execute(params);
-
 
     }
 

@@ -23,13 +23,14 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76a4c372-4b0f-45d6-b3b6-88b28d3abc42" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_maps_navigation.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_maps_navigation.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_maps_navigation.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_maps_navigation.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_maps_navigation.png" />
+    <list default="true" id="76a4c372-4b0f-45d6-b3b6-88b28d3abc42" name="Default" comment="new icon for floating button">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java" afterPath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Route.java" afterPath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Route.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/RouteActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/RouteActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_route.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_route.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="5dacca39-e978-4a88-a6ce-bce9bd334795" name="Rejected commit: Default" comment="Connecting to Google Location API" />
@@ -65,10 +66,9 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="334" column="9" selection-start-line="334" selection-start-column="9" selection-end-line="334" selection-end-column="9" />
+              <caret line="117" column="43" selection-start-line="117" selection-start-column="43" selection-end-line="117" selection-end-column="43" />
               <folding>
                 <element signature="docComment;method#onClick#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onClick#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onClick#1;class#MainActivity#0" expanded="false" />
                 <element signature="method#onCheckedChanged#0;class#MainActivity#0" expanded="false" />
                 <element signature="docComment;method#isOnline#0;class#MainActivity#0" expanded="false" />
@@ -83,10 +83,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ic_maps_navigation.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_maps_navigation.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="RouteActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/RouteActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Route.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Route.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8841808">
+              <caret line="156" column="52" selection-start-line="156" selection-start-column="52" selection-end-line="156" selection-end-column="52" />
+              <folding>
+                <element signature="class#Subway#0;class#Route#0" expanded="false" />
+                <element signature="method#Subway#0;class#Subway#0;class#Route#0" expanded="false" />
+                <element signature="class#Train#0;class#Route#0" expanded="false" />
+                <element signature="method#Train#0;class#Train#0;class#Route#0" expanded="false" />
+                <element signature="class#Onfoot#0;class#Route#0" expanded="false" />
+                <element signature="method#pyDateTimeToJoda#0;class#Route#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/org/json/JSONObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="621" column="0" selection-start-line="621" selection-start-column="0" selection-end-line="621" selection-end-column="0" />
+              <folding>
+                <element signature="e#14385#14386#0" expanded="true" />
+                <element signature="e#14440#14441#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Interactor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="232" column="84" selection-start-line="232" selection-start-column="84" selection-end-line="232" selection-end-column="84" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -97,7 +140,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ic_maps_navigation.png" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activity_route.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_route.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.793103">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ic_maps_navigation.png" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_maps_navigation.png">
           <provider selected="true" editor-type-id="images">
             <state />
@@ -115,46 +171,6 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_maps_navigation.png">
           <provider selected="true" editor-type-id="images">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Interactor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WhenAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/WhenAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlaceAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/PlaceAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Places.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Places.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="67" selection-start-line="71" selection-start-column="67" selection-end-line="71" selection-end-column="67" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -1815,15 +1831,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/WhenAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/RouteAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_route.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/card_bus.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/HttpRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Places.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/RouteActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Route.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_route.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/RouteActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Route.java" />
       </list>
     </option>
   </component>
@@ -1993,7 +2009,7 @@
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
     <property name="SearchEverywhereHistoryKey" value="oncl&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#onClick&#10;TOD&#9;FILE&#9;file:///Users/vmax/hsedorms/TODO&#10;Rou&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/RouteActivity.java&#10;Vi&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/RouteActivity.java&#10;Bus&#9;PSI&#9;JAVA://vmax.hsedorms.api.Route.Bus&#10;Mani&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/AndroidManifest.xml&#10;Main&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/MainActivity.java&#10;Route&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/RouteActivity.java&#10;onCre&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#onCreate&#10;When&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/api/WhenAdapter.java&#10;Params&#9;PSI&#9;JAVA://vmax.hsedorms.api.Interactor.Params&#10;Pa&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/api/PlaceAdapter.java&#10;Para&#9;PSI&#9;JAVA://vmax.hsedorms.api.Interactor.Params&#10;Param&#9;PSI&#9;JAVA://vmax.hsedorms.api.Interactor.Params&#10;Mai&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/MainActivity.java&#10;build&#9;FILE&#9;file:///Users/vmax/hsedorms/app/build.gradle&#10;buid&#9;PSI&#9;JAVA://com.sun.xml.internal.rngom.dt.builtin.BuiltinDatatypeBuilder&#10;buld&#9;PSI&#9;JAVA://javax.management.openmbean.TabularData&#10;Ma&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/MainActivity.java&#10;ac&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_main.xml&#10;main&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/MainActivity.java&#10;act&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_main.xml&#10;onCreate&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#onCreate&#10;update&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#updateDepartureView&#10;Place&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/Places.java&#10;And&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/AndroidManifest.xml&#10;strin&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/values/strings.xml&#10;view&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_view_route.xml&#10;TODO&#9;FILE&#9;file:///Users/vmax/hsedorms/TODO" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5X_API_23" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="164" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="70" />
@@ -2243,7 +2259,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454139177483</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="new icon for floating button">
+      <created>1454139345846</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1454139345846</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2257,31 +2279,31 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="796" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32719547" sideWeight="0.48306012" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2470024" sideWeight="0.5056657" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.30113637" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3985294" sideWeight="0.28756756" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32152975" sideWeight="0.81857926" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32058823" sideWeight="0.8118919" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32794118" sideWeight="0.6988636" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3382353" sideWeight="0.63825136" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3382353" sideWeight="0.63243246" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.48295453" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32853717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3985294" sideWeight="0.28756756" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25282714" sideWeight="0.48866856" order="0" side_tool="false" content_ui="combo" x="736" y="59" width="211" height="681" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25282714" sideWeight="0.48866856" order="0" side_tool="false" content_ui="combo" x="736" y="59" width="211" height="681" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940048" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3985294" sideWeight="0.2681081" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2529976" sideWeight="0.51133144" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39943343" sideWeight="0.8467909" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3985294" sideWeight="0.71243244" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2312,20 +2334,16 @@
     <MESSAGE value="get last location" />
     <MESSAGE value="significant work on main screen&#10;" />
     <MESSAGE value="who needs commit messages anyway" />
-    <option name="LAST_COMMIT_MESSAGE" value="who needs commit messages anyway" />
+    <MESSAGE value="new icon for floating button" />
+    <option name="LAST_COMMIT_MESSAGE" value="new icon for floating button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="41" />
+      <option name="time" value="46" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_maps_navigation.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_route.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2378,7 +2396,6 @@
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="docComment;method#onClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onClick#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onClick#1;class#MainActivity#0" expanded="false" />
             <element signature="method#onCheckedChanged#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#isOnline#0;class#MainActivity#0" expanded="false" />
@@ -2603,29 +2620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Route.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="141" column="70" selection-start-line="141" selection-start-column="70" selection-end-line="141" selection-end-column="70" />
-          <folding>
-            <element signature="class#Subway#0;class#Route#0" expanded="false" />
-            <element signature="method#Subway#0;class#Subway#0;class#Route#0" expanded="false" />
-            <element signature="class#Train#0;class#Route#0" expanded="false" />
-            <element signature="method#Train#0;class#Train#0;class#Route#0" expanded="false" />
-            <element signature="class#Onfoot#0;class#Route#0" expanded="false" />
-            <element signature="method#pyDateTimeToJoda#0;class#Route#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/RouteActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.724138">
@@ -2635,25 +2629,6 @@
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_route.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/PlaceAdapter.java">
@@ -2680,26 +2655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="334" column="9" selection-start-line="334" selection-start-column="9" selection-end-line="334" selection-end-column="9" />
-          <folding>
-            <element signature="docComment;method#onClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onClick#1;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCheckedChanged#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#isOnline#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#isOnline#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onConnectionSuspended#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onSaveInstanceState#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_maps_navigation.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2723,6 +2678,78 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_maps_navigation.png">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_route.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.793103">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/RouteActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="232" column="84" selection-start-line="232" selection-start-column="84" selection-end-line="232" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="43" selection-start-line="117" selection-start-column="43" selection-end-line="117" selection-end-column="43" />
+          <folding>
+            <element signature="docComment;method#onClick#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onClick#1;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCheckedChanged#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#isOnline#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#isOnline#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onItemSelected#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onConnectionSuspended#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onSaveInstanceState#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/org/json/JSONObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="621" column="0" selection-start-line="621" selection-start-column="0" selection-end-line="621" selection-end-column="0" />
+          <folding>
+            <element signature="e#14385#14386#0" expanded="true" />
+            <element signature="e#14440#14441#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Route.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8841808">
+          <caret line="156" column="52" selection-start-line="156" selection-start-column="52" selection-end-line="156" selection-end-column="52" />
+          <folding>
+            <element signature="class#Subway#0;class#Route#0" expanded="false" />
+            <element signature="method#Subway#0;class#Subway#0;class#Route#0" expanded="false" />
+            <element signature="class#Train#0;class#Route#0" expanded="false" />
+            <element signature="method#Train#0;class#Train#0;class#Route#0" expanded="false" />
+            <element signature="class#Onfoot#0;class#Route#0" expanded="false" />
+            <element signature="method#pyDateTimeToJoda#0;class#Route#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity
             }
             else
             {
-                /*
+
                 // start another activity
                 Intent routeIntent = new Intent(this, RouteActivity.class);
                 routeIntent.putExtra("_from",pDeparture.apiName);
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity
                 routeIntent.putExtra("when", when.when);
                 routeIntent.putExtra("when_param", when.when_param);
                 routeIntent.putExtra("device_id", Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID));
-                startActivity(routeIntent); */
+                startActivity(routeIntent);
             }
 
         }

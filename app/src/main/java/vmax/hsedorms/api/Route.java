@@ -138,8 +138,8 @@ public class Route {
             this.departure_place = jsonObject.getString("departure_place");
             this.fullRouteTime = jsonObject.getJSONObject("full_route_time").getInt("seconds");
 
-            this.bus = new Bus(jsonObject.getJSONObject("bus"));
-            this.train = new Train(jsonObject.optJSONObject("train"));
+            this.bus = jsonObject.has("bus") ? new Bus(jsonObject.getJSONObject("bus")) : null;
+            this.train = jsonObject.has("train") ? new Train(jsonObject.optJSONObject("train")) : null;
             this.subway = new Subway(jsonObject.getJSONObject("subway"));
             this.onfoot = new Onfoot(jsonObject.getJSONObject("onfoot"));
 
@@ -149,4 +149,19 @@ public class Route {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Route{" +
+                "departure=" + departure +
+                ", arrival=" + arrival +
+                ", fullRouteTime=" + fullRouteTime +
+                ", departure_place='" + departure_place + '\'' +
+                ", bus=" + bus +
+                ", train=" + train +
+                ", subway=" + subway +
+                ", onfoot=" + onfoot +
+                ", _from='" + _from + '\'' +
+                ", _to='" + _to + '\'' +
+                '}';
+    }
 }
