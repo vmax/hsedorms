@@ -3,12 +3,13 @@ package vmax.hsedorms;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.RadialGradient;
 import android.location.Location;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.PersistableBundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
@@ -39,6 +40,7 @@ import info.hoang8f.android.segmented.SegmentedGroup;
 import vmax.hsedorms.api.Interactor;
 import vmax.hsedorms.api.PlaceAdapter;
 import vmax.hsedorms.api.Places;
+import vmax.hsedorms.api.Route;
 import vmax.hsedorms.api.WhenAdapter;
 
 public class MainActivity extends AppCompatActivity
@@ -49,7 +51,6 @@ public class MainActivity extends AppCompatActivity
                     AdapterView.OnItemSelectedListener,
         DialogInterface.OnClickListener
 {
-
 
     Location lastKnownLocation;
 
@@ -81,11 +82,42 @@ public class MainActivity extends AppCompatActivity
     Button departureIsIncorrect;
 
     GoogleApiClient googleApiClient;
-    @Override
-    public void onClick(View v) {
+
+
+    /**
+     * Handles the clicks on two buttons in the MainActivity
+     * @param v the button (fabGo || departureIsIncorrect)
+     */
+    @Override public void onClick(View v) {
         if (fabGo == v)
         {
+            Log.d("hsedorms", "Params:");
+            Log.d("hsedorms", "pDeparture: " + pDeparture.apiName);
+            Log.d("hsedorms", "pArrival: " + pArrival.apiName);
             // TODO: start RouteActivity
+            if (!isOnline())
+            {
+                AlertDialog dialog = new AlertDialog.Builder(this)
+                        .setTitle("Проблема")
+                        .setMessage("Судя по всему, интернет-соединение недоступно")
+                        .setCancelable(true)
+                        .create();
+                dialog.setCanceledOnTouchOutside(true);
+                dialog.show();
+            }
+            else
+            {
+                /*
+                // start another activity
+                Intent routeIntent = new Intent(this, RouteActivity.class);
+                routeIntent.putExtra("_from",pDeparture.apiName);
+                routeIntent.putExtra("_to", pArrival.apiName);
+                routeIntent.putExtra("when", when.when);
+                routeIntent.putExtra("when_param", when.when_param);
+                routeIntent.putExtra("device_id", Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID));
+                startActivity(routeIntent); */
+            }
+
         }
         else if (departureIsIncorrect == v)
         {
@@ -93,16 +125,23 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public void onClick(DialogInterface dialog, int which) {
+
+    @Override public void onClick(DialogInterface dialog, int which) {
+        Log.d("hsedorms", "onClick on Dialog");
+        Places.Place oldDeparture = pDeparture;
         pDeparture = dialogAdapter.getItem(which);
+
         updateDepartureView();
-        handleArrival();
+
+        if (!Places.placesAreInSameGroup(oldDeparture, pDeparture)) {
+            // we replace contents in arrival selector only if we changed the group of selection
+            handleArrival();
+        }
+
     }
 
-    // TODO: update When in MainActivity
-    @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
+    @Override public void onCheckedChanged(RadioGroup group, int checkedId) {
+        // TODO: update When in MainActivity
         ArrayList<Interactor.When> resultWhenList;
         switch (checkedId)
         {
@@ -134,15 +173,17 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    /**
+     * Check if performing internet requests is reasonable
+     * @return if device is connecting or connecting
+     */
     public boolean isOnline() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
         return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+    @Override public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         if (parent.getAdapter() == arrivalAdapter)
         {
             pArrival = (Places.Place)parent.getAdapter().getItem(position);
@@ -155,26 +196,22 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
+    @Override public void onNothingSelected(AdapterView<?> parent) {
         ; // TODO: implement?
     }
 
-    @Override
-    public void onConnectionSuspended(int i) {
+    @Override public void onConnectionSuspended(int i) {
 
     }
 
-    // react to changes in pDeparture
-    public void updateDepartureView ()
-    {
-        if (pDeparture != null)
-        {
+    /**
+     * Reacts to changes in pDeparture
+     */
+    public void updateDepartureView () {
+        if (pDeparture != null) {
             tDeparture.setText(pDeparture.toString());
         }
     }
-
-
 
 
     // Couldn't connect to Google Location API
@@ -218,6 +255,7 @@ public class MainActivity extends AppCompatActivity
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Где Вы?");
         builder.setAdapter(dialogAdapter, this);
+        builder.setOnItemSelectedListener(this);
         builder.setCancelable(false);
         builder.create().show();
     }
@@ -244,6 +282,7 @@ public class MainActivity extends AppCompatActivity
 
        // Toast.makeText(this, pDeparture.toString(), Toast.LENGTH_LONG);
         arrivalSelector.performItemClick(arrivalSelector.getChildAt(0), 0, arrivalAdapter.getItemId(0));
+
     }
 
     public void handleArrival()
@@ -261,6 +300,10 @@ public class MainActivity extends AppCompatActivity
         }
 
         arrivalAdapter.notifyDataSetChanged();
+        arrivalSelector.performItemClick(arrivalSelector.getChildAt(0), 0, arrivalAdapter.getItemId(0));
+        arrivalSelector.setSelection(0);
+        pArrival = arrivalAdapter.getItem(0);
+        Log.d("hsedorms", "new arrival is " + pArrival.apiName);
     }
 
     @Override
@@ -276,8 +319,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     // TODO: implement
-    @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+    @Override public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
     }
 
@@ -332,15 +374,20 @@ public class MainActivity extends AppCompatActivity
         dialogAdapter = new PlaceAdapter(this, R.layout.spinner_element, Arrays.asList(Places.AllPlaces));
         dialogAdapter.setDropDownViewResource(R.layout.spinner_element);
 
+        // check if 'today' option should be displayed
+        ArrayList<Interactor.When> now = Interactor.getTimes(true);
+
+        if (now.isEmpty())
+        {
+            dateToday.setVisibility(View.GONE);
+        }
+
+
         whenList = new ArrayList<Interactor.When>();
         whenAdapter = new WhenAdapter(this, R.layout.spinner_element, whenList);
         whenAdapter.setDropDownViewResource(R.layout.spinner_element);
         timeSelector.setAdapter(whenAdapter);
         timeSelector.setOnItemSelectedListener(this);
-
-
-        // TODO: set on item selected listener for whenAdapter
-
 
     }
 }

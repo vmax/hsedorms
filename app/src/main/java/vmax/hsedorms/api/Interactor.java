@@ -2,7 +2,10 @@ package vmax.hsedorms.api;
 
 import android.app.Activity;
 import android.os.AsyncTask;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -19,20 +22,23 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.CharBuffer;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
 import vmax.hsedorms.R;
+import vmax.hsedorms.RouteActivity;
 
 public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
 
-    Activity context;
+    RouteActivity context;
     ProgressBar downloadProgress;
     JSONObject resultJSON;
 
@@ -147,21 +153,22 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
 
     }
 
-    public class Params {
-        String _from;
-        String _to;
-        When when;
-        String device_id;
+    public static class Params{
+        public Places.Place _from;
+        public Places.Place _to;
+        public When when;
+        public String device_id;
 
         @Override
         public String toString() {
             String format = "_from=%s&_to=%s&when=%s&when_param=%s&device_id=%s";
-            return String.format(format, _from, _to, when.when, when.when_param, device_id);
+            return String.format(format, _from.apiName, _to.apiName, when.when, when.when_param, device_id);
         }
+
     }
     public Interactor(Activity context)
     {
-        this.context = context;
+        this.context = (RouteActivity)context;
         this.downloadProgress = (ProgressBar) context.findViewById(R.id.downloadProgress);
     }
 
@@ -185,45 +192,59 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
         URL url;
 
         Route response = null;
-        try
-        {
+        try {
+
             url = new URL("http://dubki.pythonanywhere.com/route_mobile");
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
             connection.setDefaultUseCaches(false); // don't cache the response
             connection.setDoInput(true);
             connection.setDoOutput(true);
-            input = connection.getInputStream();
+
             output = connection.getOutputStream();
 
             writer = new BufferedWriter(new OutputStreamWriter(output, "UTF-8"));
             writer.write(params[0].toString());
             writer.close();
 
-            reader = new BufferedReader(new InputStreamReader(input, "UTF-8"));
+            reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
             stringBuilder = new StringBuilder();
 
-            do {
-                oneLine = reader.readLine();
-                if (oneLine != null)
-                {
-                    stringBuilder.append(oneLine);
+
+            String line;
+
+            if (200 == connection.getResponseCode()) {
+
+                while ((line = reader.readLine()) != null) {
+                    stringBuilder.append(line);
+                    Log.d("hsedorms/Interactor", "read a line with length = " + String.valueOf(line.length()));
+                    Log.d("hsedorms/Interactor", "line == " + line);
                 }
-            } while (oneLine != null);
+
+            }
+
 
             resultJSON = new JSONObject(stringBuilder.toString());
-            response = Route.fromJSON(resultJSON);
-        } catch (MalformedURLException ex)
+            response = new Route(resultJSON);
+            return response;
+        }
+        catch (MalformedURLException ex)
         {
             // shouldn't happen as we have fixed known URL
         } catch (IOException ex)
         {
+            Log.d("hsedorms/Interactor", ":IOException " + ex.getMessage());
             // may happen
         } catch (JSONException ex)
         {
+            Log.d("hsedorms/Interactor", ":JSONException " + ex.getMessage());
+
             // should not happen but who knows
         }
-        return response;
+        finally{
+            return response;
+        }
+
     }
 
     @Override
@@ -233,7 +254,14 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
         {
             // TODO: display that we've got errors
             AlertDialog.Builder builder = new AlertDialog.Builder(this.context);
+            builder.setTitle("Проблема");
+            builder.setMessage("Большая проблема!");
+            builder.create().show();
 
+        }
+        else
+        {
+            context.displayRoute(route);
         }
     }
 }

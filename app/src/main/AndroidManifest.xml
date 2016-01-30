@@ -21,7 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RouteActivity" />
+        <activity android:name=".RouteActivity"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>

@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.io.Serializable;
+import java.util.Arrays;
 import java.util.List;
 
 import vmax.hsedorms.R;
@@ -62,6 +64,26 @@ public class Places {
         };
     }
 
+    public static boolean placesAreInSameGroup (Place place1, Place place2)
+    {
+        List<Places.Place> Edus = Arrays.asList(Places.Edus);
+        List<Places.Place> Dorms = Arrays.asList(Places.Dorms);
+        return ((Edus.contains(place1) && Edus.contains(place2))
+                ||(Dorms.contains(place1) && Dorms.contains(place2)));
+
+    }
+
+    public static Place findPlaceByApiName(String apiName)
+    {
+        for (Place p : AllPlaces)
+        {
+            if (p.apiName.compareTo(apiName) == 0)
+            {
+                return p;
+            }
+        }
+        return null;
+    }
 
     // TODO: do we need to check that distance is reasonable (<1km)?
     public static Place getNearestPlace(Location currentLocation)
