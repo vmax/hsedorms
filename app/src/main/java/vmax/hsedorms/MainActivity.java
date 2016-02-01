@@ -8,6 +8,8 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Handler;
+import android.os.Message;
 import android.os.PersistableBundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
@@ -49,8 +51,14 @@ public class MainActivity extends AppCompatActivity
                     SegmentedGroup.OnCheckedChangeListener,
                     View.OnClickListener,
                     AdapterView.OnItemSelectedListener,
-        DialogInterface.OnClickListener
+        DialogInterface.OnClickListener,
+        Handler.Callback
 {
+
+    final int LOCATION_IS_SET = 1;
+    final int LOCATION_IS_NOT_SET = 2;
+
+    Handler geoMessageQueue;
 
     Location lastKnownLocation;
 
@@ -83,6 +91,25 @@ public class MainActivity extends AppCompatActivity
 
     GoogleApiClient googleApiClient;
 
+    // handles message that location is set by geolocation
+    @Override
+    public boolean handleMessage(Message msg) {
+        switch (msg.what)
+        {
+            case LOCATION_IS_SET:
+                Log.d("hsedorms/geoMessageQueue", "location set");
+                handleDeparture();
+                handleArrival();
+                break;
+            case LOCATION_IS_NOT_SET:
+                Log.d("hsedorms/geoMessageQueue", "location is not set");
+                showDepartureChooserDialog();
+                handleDeparture();
+                handleArrival();
+                break;
+        }
+        return true;
+    }
 
     /**
      * Handles the clicks on two buttons in the MainActivity
@@ -218,8 +245,7 @@ public class MainActivity extends AppCompatActivity
     // Probably, there are no Google Play Services on the device
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        handleDeparture();
-        handleArrival();
+        geoMessageQueue.sendEmptyMessage(LOCATION_IS_NOT_SET);
     }
 
     @Override
@@ -228,10 +254,20 @@ public class MainActivity extends AppCompatActivity
         {
             try {
                 lastKnownLocation = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
+                Toast.makeText(MainActivity.this, "Permission granted!", Toast.LENGTH_SHORT).show();
             } catch (SecurityException ex)
             {
                 ; // shouldn't happen, though
             }
+        }
+
+        if (lastKnownLocation == null)
+        {
+            geoMessageQueue.sendEmptyMessage(LOCATION_IS_NOT_SET);
+        }
+        else
+        {
+            geoMessageQueue.sendEmptyMessage(LOCATION_IS_SET);
         }
     }
 
@@ -240,13 +276,17 @@ public class MainActivity extends AppCompatActivity
         int isPermitted = ContextCompat.checkSelfPermission(this, permission.ACCESS_FINE_LOCATION);
         if (PackageManager.PERMISSION_GRANTED == isPermitted) {
             lastKnownLocation = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
+            if (lastKnownLocation == null)
+            {
+                geoMessageQueue.sendEmptyMessage(LOCATION_IS_NOT_SET);
+            } else
+            {
+                geoMessageQueue.sendEmptyMessage(LOCATION_IS_SET);
+            }
         } else
         {
             ActivityCompat.requestPermissions(this, new String[]{permission.ACCESS_FINE_LOCATION}, 0);
         }
-
-        handleDeparture();
-        handleArrival();
 
     }
 
@@ -267,7 +307,7 @@ public class MainActivity extends AppCompatActivity
         {
             // no
             Log.d("hsedorms", "no last location");
-            showDepartureChooserDialog();
+          //  showDepartureChooserDialog();
 
         }
         else
@@ -339,6 +379,8 @@ public class MainActivity extends AppCompatActivity
                     .addApi(LocationServices.API)
                     .build();
         }
+
+        geoMessageQueue = new Handler(this);
 
         when = new Interactor.When("now", "now");
 

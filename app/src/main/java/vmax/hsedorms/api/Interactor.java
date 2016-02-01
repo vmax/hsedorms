@@ -66,6 +66,7 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
 
 
     // FIXME: return only in reasonable time (+1:30)
+    // FIXME: onlyAfterCurrentTime ->> tomorrow
     public static ArrayList<When> getTimes(boolean onlyAfterCurrentTime)
     {
         ArrayList<When> result = new ArrayList<When>();

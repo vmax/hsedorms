@@ -26,22 +26,22 @@ public class Places {
 
     static
     {
-        aeroport = new Place("aeroport", "Кочновский проезд (метро Аэропорт)",  Pair.create(55.806661f, 37.541719f));
+        aeroport = new Place("aeroport", "Кочновский проезд",  Pair.create(55.806661f, 37.541719f));
         tekstilshiki = new Place("tekstilshiki","Текстильщики", Pair.create(55.703758f, 37.726134f));
 
         strogino = new Place("strogino", "Строгино", Pair.create(55.803469f, 37.409846f));
-        myasnitskaya = new Place("myasnitskaya", "Мясницкая (метро Лубянка)",Pair.create(55.761345f,37.632969f));
-        vavilova = new Place("vavilova", "Вавилова (метро Ленинский проспект)",Pair.create(55.704874f, 37.585359f));
-        izmailovo = new Place("izmailovo", "Кирпичная улица (метро Семёновская)",Pair.create(55.77873f, 37.733221f));
+        myasnitskaya = new Place("myasnitskaya", "Мясницкая",Pair.create(55.761345f,37.632969f));
+        vavilova = new Place("vavilova", "Вавилова",Pair.create(55.704874f, 37.585359f));
+        izmailovo = new Place("izmailovo", "Кирпичная улица",Pair.create(55.77873f, 37.733221f));
         st_basmannaya = new Place("st_basmannaya", "Старая Басманная",Pair.create(55.766734f, 37.663288f));
         shabolovskaya = new Place("shabolovskaya", "Шаболовская",Pair.create(55.72055f, 37.609245f));
-        petrovka = new Place("petrovka", "Петровка (метро Кузнецкий мост)",Pair.create(55.762839f, 37.618516f));
-        paveletskaya = new Place("paveletskaya", "Малая Пионерская (метро Павелецкая)",Pair.create(55.728358f, 37.63517f));
-        ilyinka = new Place("ilyinka", "Ильинка (метро Китай-город)",Pair.create(55.755864f, 37.628029f));
-        trehsvyat_b = new Place("trehsvyat_b", "Большой Трёхсвятительский переулок (метро Китай-город)",Pair.create(55.755368f, 37.646471f));
-        trehsvyat_m = new Place("trehsvyat_m", "Малый Трёхсвятительский переулок (метро Китай-город)",Pair.create(55.754091f, 37.646552f));
-        hitra = new Place("hitra", "Хитровский переулок (метро Китай-город)",Pair.create(55.753858f, 37.645519f));
-        gnezdo = new Place("gnezdo", "Малый Гнездниковский переулок (метро Тверская)", Pair.create(55.76169f, 37.60611f));
+        petrovka = new Place("petrovka", "Петровка ",Pair.create(55.762839f, 37.618516f));
+        paveletskaya = new Place("paveletskaya", "Малая Пионерская",Pair.create(55.728358f, 37.63517f));
+        ilyinka = new Place("ilyinka", "Ильинка",Pair.create(55.755864f, 37.628029f));
+        trehsvyat_b = new Place("trehsvyat_b", "Большой Трёхсвятительский переулок",Pair.create(55.755368f, 37.646471f));
+        trehsvyat_m = new Place("trehsvyat_m", "Малый Трёхсвятительский переулок",Pair.create(55.754091f, 37.646552f));
+        hitra = new Place("hitra", "Хитровский переулок",Pair.create(55.753858f, 37.645519f));
+        gnezdo = new Place("gnezdo", "Малый Гнездниковский переулок", Pair.create(55.76169f, 37.60611f));
 
         dubki = new Place("dubki", "Дубки", Pair.create(55.660404f, 37.228889f));
         odintsovo = new Place("odintsovo", "Одинцово", Pair.create(55.669854f, 37.27968f));
