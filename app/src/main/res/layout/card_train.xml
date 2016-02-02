@@ -10,25 +10,33 @@
         android:layout_margin="@dimen/activity_vertical_margin">
 
         <TextView
-            android:text="Дубки"
+            android:text="Белорусская — Одинцово"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bus$_from"
+            android:id="@+id/train$title"
             style="?android:attr/textAppearanceLarge"/>
 
         <TextView
             android:text="Одинцово"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bus$_to"
-            android:layout_below="@+id/bus$_from"
-            style="?android:attr/textAppearanceLarge"/>
+            android:id="@+id/train$to"
+            android:layout_below="@id/train$title"
+            style="?android:attr/textAppearanceMedium"/>
+
+        <TextView
+            android:text="остановки"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/train$stops"
+            android:layout_below="@id/train$to"
+            style="?android:attr/textAppearanceSmall"/>
 
         <TextView
             android:text="9:00"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bus$departure"
+            android:id="@+id/train$departure"
             android:layout_alignParentRight="true"
             style="?android:attr/textAppearanceMedium"/>
 
@@ -36,12 +44,10 @@
             android:text="9:20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bus$arrival"
+            android:id="@+id/train$arrival"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/bus$departure"
+            android:layout_below="@+id/train$departure"
             style="?android:attr/textAppearanceMedium"/>
-
-
 
     </RelativeLayout>
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -10,39 +9,23 @@
         android:layout_margin="@dimen/activity_vertical_margin">
 
         <TextView
-            android:text="Дубки"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bus$_from"
+            android:id="@+id/onfoot$time"
             style="?android:attr/textAppearanceLarge"/>
 
         <TextView
-            android:text="Одинцово"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bus$_to"
-            android:layout_below="@+id/bus$_from"
-            style="?android:attr/textAppearanceLarge"/>
+            android:layout_alignParentRight="true"
+            android:id="@+id/onfoot$departure"/>
 
         <TextView
-            android:text="9:00"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bus$departure"
             android:layout_alignParentRight="true"
-            style="?android:attr/textAppearanceMedium"/>
-
-        <TextView
-            android:text="9:20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bus$arrival"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/bus$departure"
-            style="?android:attr/textAppearanceMedium"/>
-
-
+            android:layout_below="@id/onfoot$departure"
+            android:id="@+id/onfoot$arrival"/>
 
     </RelativeLayout>
-
 </android.support.v7.widget.CardView>
