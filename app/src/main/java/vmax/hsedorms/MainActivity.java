@@ -39,6 +39,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import info.hoang8f.android.segmented.SegmentedGroup;
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
 import vmax.hsedorms.api.Interactor;
 import vmax.hsedorms.api.PlaceAdapter;
 import vmax.hsedorms.api.Places;
@@ -427,6 +428,18 @@ public class MainActivity extends AppCompatActivity
         whenAdapter.setDropDownViewResource(R.layout.spinner_element);
         timeSelector.setAdapter(whenAdapter);
         timeSelector.setOnItemSelectedListener(this);
+
+        // TODO: написать Showcases для всех элементов
+        // Проверить отображаются ли они после первого запуска (или использовать SharedPreferences?)\
+
+
+        new MaterialShowcaseView.Builder(this)
+                .setTarget(tDeparture)
+                .setDismissText("ЩУКА")
+                .setContentText("Мы определили геолокацию за тебя. Может быть.")
+                .setDelay(500)
+                .singleUse("ll") // id
+                .show();
 
     }
 }

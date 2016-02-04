@@ -2,6 +2,7 @@ package vmax.hsedorms;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.widget.NestedScrollView;
@@ -12,9 +13,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
@@ -34,9 +38,9 @@ public class RouteActivity extends AppCompatActivity {
     Interactor.Params params;
     LinearLayout cardsContainer;
 
-    public void displayRoute(@NonNull Route route)
+    public void displayRoute(final @NonNull Route route)
     {
-        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        final LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
 
         ArrayList<View> cards = new ArrayList<>();
@@ -44,6 +48,8 @@ public class RouteActivity extends AppCompatActivity {
         /* firstly we add view in a natural order (bus? => train? => subway => onfoot)
             then we check route.departure_place and reverse the list with views if needed (if departure_place  == 'edu')
           */
+
+
 
         if (route.bus != null)
         {
@@ -109,11 +115,20 @@ public class RouteActivity extends AppCompatActivity {
             onfoot$card.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    new AlertDialog.Builder(RouteActivity.this)
-                            .setTitle("Title")
-                            .setMessage("Message")
-                            .create()
-                            .show();
+                    final AlertDialog ad = new AlertDialog.Builder(RouteActivity.this)
+                            .setTitle("Карта")
+                            .create();
+
+                    View dialogView = inflater.inflate(R.layout.map_dialog, null);
+                    ImageView mapView = (ImageView)dialogView.findViewById(R.id.map);
+
+                    Picasso.with(RouteActivity.this)
+                            .load(route.onfoot.mapsrc)
+                            .into(mapView);
+
+                    ad.setView(dialogView);
+                    ad.show();
+
                 }
             });
 
