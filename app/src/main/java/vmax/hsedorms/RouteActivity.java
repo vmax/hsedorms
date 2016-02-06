@@ -53,7 +53,7 @@ public class RouteActivity extends AppCompatActivity {
 
         if (route.bus != null)
         {
-            CardView bus$card = (CardView)inflater.inflate(R.layout.card_bus, null);
+            CardView bus$card = (CardView)inflater.inflate(R.layout.card_bus, cardsContainer, false);
             TextView bus$_from = (TextView)bus$card.findViewById(R.id.bus$_from);
             TextView bus$_to = (TextView)bus$card.findViewById(R.id.bus$_to);
             TextView bus$arrival = (TextView)bus$card.findViewById(R.id.bus$arrival);
@@ -69,7 +69,7 @@ public class RouteActivity extends AppCompatActivity {
 
         if (route.train != null)
         {
-            CardView train$card = (CardView)inflater.inflate(R.layout.card_train, null);
+            CardView train$card = (CardView)inflater.inflate(R.layout.card_train, cardsContainer, false);
             TextView train$title = (TextView)train$card.findViewById(R.id.train$title);
             TextView train$to = (TextView)train$card.findViewById(R.id.train$to);
             TextView train$stops = (TextView)train$card.findViewById(R.id.train$stops);
@@ -77,7 +77,7 @@ public class RouteActivity extends AppCompatActivity {
             TextView train$arrival = (TextView)train$card.findViewById(R.id.train$arrival);
 
             train$title.setText(route.train.title);
-            train$to.setText("выходите на станции: " + route.train.to);
+            train$to.setText(getString(R.string.train_to) + " " + route.train.to);
             train$stops.setText("остановки: " + route.train.stops);
             train$departure.setText(route.train.departure.toString("HH:mm"));
             train$arrival.setText(route.train.arrival.toString("HH:mm"));
@@ -87,7 +87,7 @@ public class RouteActivity extends AppCompatActivity {
 
         if (route.subway != null)
         {
-            CardView subway$card = (CardView)inflater.inflate(R.layout.card_subway, null);
+            CardView subway$card = (CardView)inflater.inflate(R.layout.card_subway, cardsContainer, false);
             TextView subway$_from = (TextView)subway$card.findViewById(R.id.subway$_from);
             TextView subway$_to = (TextView)subway$card.findViewById(R.id.subway$_to);
             TextView subway$arrival = (TextView)subway$card.findViewById(R.id.subway$arrival);
@@ -103,7 +103,7 @@ public class RouteActivity extends AppCompatActivity {
 
         if(route.onfoot != null)
         {
-            CardView onfoot$card = (CardView)inflater.inflate(R.layout.card_onfoot, null);
+            CardView onfoot$card = (CardView)inflater.inflate(R.layout.card_onfoot, cardsContainer, false);
             TextView onfoot$time = (TextView)onfoot$card.findViewById(R.id.onfoot$time);
             TextView onfoot$arrival = (TextView)onfoot$card.findViewById(R.id.onfoot$arrival);
             TextView onfoot$departure = (TextView)onfoot$card.findViewById(R.id.onfoot$departure);
@@ -146,11 +146,6 @@ public class RouteActivity extends AppCompatActivity {
             cardsContainer.addView(v);
         }
 
-
-
-        /*
-        TextView tv = (TextView) findViewById(R.id.smth);
-        tv.setText(route.toString());*/
     }
 
 

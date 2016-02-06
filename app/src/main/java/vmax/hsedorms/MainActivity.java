@@ -13,6 +13,7 @@ import android.os.Message;
 import android.os.PersistableBundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -27,7 +28,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -39,7 +39,10 @@ import java.util.Arrays;
 import java.util.List;
 
 import info.hoang8f.android.segmented.SegmentedGroup;
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
+import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
+import uk.co.deanwild.materialshowcaseview.shape.Shape;
 import vmax.hsedorms.api.Interactor;
 import vmax.hsedorms.api.PlaceAdapter;
 import vmax.hsedorms.api.Places;
@@ -74,6 +77,8 @@ public class MainActivity extends AppCompatActivity
 
     WhenAdapter whenAdapter;
     ArrayList<Interactor.When> whenList;
+
+    CoordinatorLayout rootCordinatorLayout;
 
     TextView tDeparture;
     SegmentedGroup dateSelector;
@@ -215,12 +220,10 @@ public class MainActivity extends AppCompatActivity
         if (parent.getAdapter() == arrivalAdapter)
         {
             pArrival = (Places.Place)parent.getAdapter().getItem(position);
-            Toast.makeText(this, pArrival.toString(), Toast.LENGTH_LONG).show();
         }
         else if (parent.getAdapter() == whenAdapter)
         {
             when = (Interactor.When)parent.getAdapter().getItem(position);
-            Toast.makeText(this, when.toString(), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -255,7 +258,6 @@ public class MainActivity extends AppCompatActivity
         {
             try {
                 lastKnownLocation = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
-                Toast.makeText(MainActivity.this, "Permission granted!", Toast.LENGTH_SHORT).show();
             } catch (SecurityException ex)
             {
                 ; // shouldn't happen, though
@@ -318,7 +320,6 @@ public class MainActivity extends AppCompatActivity
             updateDepartureView();
         }
 
-       // Toast.makeText(this, pDeparture.toString(), Toast.LENGTH_LONG);
         arrivalSelector.performItemClick(arrivalSelector.getChildAt(0), 0, arrivalAdapter.getItemId(0));
 
     }
@@ -381,9 +382,10 @@ public class MainActivity extends AppCompatActivity
                     .build();
         }
 
-        geoMessageQueue = new Handler(this);
 
         when = new Interactor.When("now", "now");
+
+        rootCordinatorLayout = (CoordinatorLayout)findViewById(R.id.rootCoordinatorLayout);
 
         tDeparture = (TextView) findViewById(R.id.departure);
         dateSelector = (SegmentedGroup)findViewById(R.id.dateSelector);
@@ -414,7 +416,6 @@ public class MainActivity extends AppCompatActivity
         dialogAdapter = new PlaceAdapter(this, R.layout.spinner_element, Arrays.asList(Places.AllPlaces));
         dialogAdapter.setDropDownViewResource(R.layout.spinner_element);
 
-        // check if 'today' option should be displayed
         ArrayList<Interactor.When> now = Interactor.getTimes(true);
 
         if (now.isEmpty())
@@ -429,17 +430,54 @@ public class MainActivity extends AppCompatActivity
         timeSelector.setAdapter(whenAdapter);
         timeSelector.setOnItemSelectedListener(this);
 
-        // TODO: написать Showcases для всех элементов
-        // Проверить отображаются ли они после первого запуска (или использовать SharedPreferences?)\
+        usageShowcase();
+        geoMessageQueue = new Handler(this);
 
 
-        new MaterialShowcaseView.Builder(this)
-                .setTarget(tDeparture)
-                .setDismissText("ЩУКА")
-                .setContentText("Мы определили геолокацию за тебя. Может быть.")
-                .setDelay(500)
-                .singleUse("ll") // id
-                .show();
+    }
 
+    protected void usageShowcase()
+    {
+        ShowcaseConfig config = new ShowcaseConfig();
+        config.setDelay(500);
+
+        MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this, "Sequence");
+        sequence.setConfig(config);
+
+        sequence.addSequenceItem(
+                new MaterialShowcaseView.Builder(this)
+                        .setTarget(findViewById(R.id.spacer))
+                        .setContentText(R.string.sc_main)
+                        .setDismissOnTouch(true)
+                        .build());
+
+        sequence.addSequenceItem(
+                new MaterialShowcaseView.Builder(this)
+                        .setTarget(tDeparture)
+                        .setContentText(R.string.sc_departure)
+                        .setDismissOnTouch(true)
+                        .build());
+
+        sequence.addSequenceItem(
+                new MaterialShowcaseView.Builder(this)
+                        .setTarget(arrivalSelector)
+                        .setContentText(R.string.sc_arrival)
+                        .setDismissOnTouch(true)
+                        .build());
+
+        sequence.addSequenceItem(
+                new MaterialShowcaseView.Builder(this)
+                        .setTarget(dateSelector)
+                        .setContentText(R.string.sc_date)
+                        .setDismissOnTouch(true)
+                        .build());
+
+        sequence.addSequenceItem(
+                new MaterialShowcaseView.Builder(this)
+                        .setTarget(fabGo)
+                        .setContentText(R.string.sc_go)
+                        .setDismissOnTouch(true)
+                        .build());
+        sequence.start();
     }
 }

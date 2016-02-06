@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardElevation="4dp"
+    card_view:cardCornerRadius="3dp">
 
-    <RelativeLayout
+
+<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/activity_vertical_margin">
@@ -18,14 +23,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:id="@+id/onfoot$departure"/>
+            android:id="@+id/onfoot$departure"
+            style="?android:attr/textAppearanceMedium"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_below="@id/onfoot$departure"
-            android:id="@+id/onfoot$arrival"/>
+            android:id="@+id/onfoot$arrival"
+            style="?android:attr/textAppearanceMedium"/>
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>
