@@ -5,6 +5,7 @@
     <string name="dateTomorrow">Завтра</string>
     <string name="youAreNear">Вы недалеко от:</string>
     <string name="detectingLocation">определение местоположения</string>
+    <string name="swap">Обратно</string>
     <string name="detectedLocationIsWrong">Выбрать</string>
     <string name="train_to">до</string>
     <string name="sc_main">
@@ -13,4 +14,5 @@
     <string name="sc_arrival">Выбери пункт назначения из списка</string>
     <string name="sc_date">Можно запланировать поездку заранее.\n\nЗавтра ты не проспишь первую пару!</string>
     <string name="sc_go">Поехали!</string>
+
 </resources>

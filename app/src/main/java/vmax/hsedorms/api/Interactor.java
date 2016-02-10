@@ -218,8 +218,6 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
 
                 while ((line = reader.readLine()) != null) {
                     stringBuilder.append(line);
-                    Log.d("hsedorms/Interactor", "read a line with length = " + String.valueOf(line.length()));
-                    Log.d("hsedorms/Interactor", "line == " + line);
                 }
 
             }

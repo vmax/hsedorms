@@ -24,13 +24,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76a4c372-4b0f-45d6-b3b6-88b28d3abc42" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/cardview_v7_23_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/cardview_v7_23_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java" afterPath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/RouteActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/RouteActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Route.java" afterPath="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Route.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/card_bus.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/card_bus.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/card_onfoot.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/card_onfoot.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/card_subway.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/card_subway.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/card_train.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/card_train.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -63,60 +64,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.379311">
-              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+            <state vertical-scroll-proportion="-7.2222223">
+              <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;method#isOnline#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#isOnline#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onItemSelected#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#7569#7570#0" expanded="true" />
+                <element signature="e#7605#7606#0" expanded="true" />
+                <element signature="method#onConnectionSuspended#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onConnectionFailed#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onConnected#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onSaveInstanceState#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#usageShowcase#0;class#MainActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Interactor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="231" column="12" selection-start-line="231" selection-start-column="12" selection-end-line="231" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card_onfoot.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_onfoot.xml">
-          <provider editor-type-id="android-designer">
+      <file leaf-file-name="ic_maps_navigation.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_maps_navigation.png">
+          <provider selected="true" editor-type-id="images">
             <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.962963">
-              <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-              <folding>
-                <element signature="e#528#561#0" expanded="true" />
-              </folding>
-            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card_subway.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_subway.xml">
+      <file leaf-file-name="map_dialog.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/map_dialog.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.7586207">
-              <caret line="43" column="54" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="54" />
-              <folding>
-                <element signature="e#530#563#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="card_train.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_train.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.6896553">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-              <folding>
-                <element signature="e#535#568#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-4.137931">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,65 +123,64 @@
       <file leaf-file-name="RouteActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/RouteActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.5555556">
+              <caret line="126" column="43" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
               <folding>
-                <element signature="e#3026#3054#0" expanded="true" />
+                <element signature="e#4910#5615#0" expanded="true" />
+                <element signature="e#5614#5615#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Route.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Route.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Route.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.912037">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
-                <element signature="method#Subway#0;class#Subway#0;class#Route#0" expanded="false" />
-                <element signature="method#Train#0;class#Train#0;class#Route#0" expanded="false" />
                 <element signature="method#pyDateTimeToJoda#0;class#Route#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java">
+      <file leaf-file-name="DialogInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/content/DialogInterface.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="354" column="28" selection-start-line="354" selection-start-column="28" selection-end-line="354" selection-end-column="28" />
+              <caret line="111" column="14" selection-start-line="111" selection-start-column="14" selection-end-line="111" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="62" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#onClick#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onClick#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onCheckedChanged#0;class#MainActivity#0" expanded="false" />
-                <element signature="docComment;method#isOnline#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#isOnline#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#7670#7671#0" expanded="true" />
-                <element signature="e#7706#7707#0" expanded="true" />
-                <element signature="docComment;method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onConnectionFailed#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onConnected#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#showDepartureChooserDialog#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#handleArrival#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onRestoreInstanceState#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#14762#14778#0" expanded="true" />
-                <element signature="e#15041#15062#0" expanded="true" />
-                <element signature="e#15330#15349#0" expanded="true" />
-                <element signature="e#15614#15630#0" expanded="true" />
-                <element signature="e#15888#15902#0" expanded="true" />
+                <element signature="e#505#538#0" expanded="true" />
+                <element signature="e#849#882#0" expanded="true" />
+                <element signature="e#907#942#0" expanded="true" />
+                <element signature="e#968#1003#0" expanded="true" />
+                <element signature="e#1027#1060#0" expanded="true" />
+                <element signature="e#1440#1459#0" expanded="true" />
+                <element signature="e#1481#1501#0" expanded="true" />
+                <element signature="e#1799#1826#0" expanded="true" />
+                <element signature="e#2335#2349#0" expanded="true" />
+                <element signature="e#2646#2679#0" expanded="true" />
+                <element signature="e#3032#3065#0" expanded="true" />
+                <element signature="e#3385#3418#0" expanded="true" />
+                <element signature="e#3697#3730#0" expanded="true" />
+                <element signature="e#4088#4107#0" expanded="true" />
+                <element signature="e#4408#4425#0" expanded="true" />
+                <element signature="e#4766#4788#0" expanded="true" />
+                <element signature="e#5134#5167#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -191,24 +189,19 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2222223">
-              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+            <state vertical-scroll-proportion="-9.444445">
+              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card_bus.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_bus.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.586207">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-              <folding>
-                <element signature="e#531#564#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -667,9 +660,9 @@
                 <option name="name" value="prepareComAndroidSupportAppcompatV72311Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:cardview-v7:23.0.1" />
+                <option name="description" value="Prepare com.android.support:cardview-v7:23.1.1" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComAndroidSupportCardviewV72301Library" />
+                <option name="name" value="prepareComAndroidSupportCardviewV72311Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:design:23.1.1" />
@@ -1264,9 +1257,9 @@
                 <option name="name" value="prepareComAndroidSupportAppcompatV72311Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:cardview-v7:23.0.1" />
+                <option name="description" value="Prepare com.android.support:cardview-v7:23.1.1" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComAndroidSupportCardviewV72301Library" />
+                <option name="name" value="prepareComAndroidSupportCardviewV72311Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:design:23.1.1" />
@@ -1496,7 +1489,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4362611514000" />
+        <entry key="$PROJECT_DIR$" value="4363150369000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1715,17 +1708,17 @@
                             <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.1.1/appcompat-v7-23.1.1.aar" />
                             <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/design/23.1.1/design-23.1.1.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.hoang8f/android-segmented/1.0.6/dff4c881f6167667f06b01c0b76989588482b907/android-segmented-1.0.6.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/cardview-v7/23.0.1/cardview-v7-23.0.1.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/cardview-v7/23.1.1/cardview-v7-23.1.1.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/23.1.1/recyclerview-v7-23.1.1.aar" />
                             <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-location/8.4.0/play-services-location-8.4.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.8.2/d27c24204c5e507b16fec01006b3d0f1ec42aed4/joda-time-2.8.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.deano2390/MaterialShowcaseView/1.0.6/59c459721c0ac6c97c73590e874e663ff5f26d88/MaterialShowcaseView-1.0.6.aar" />
                             <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/23.1.1/support-v4-23.1.1.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar" />
                             <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-base/8.4.0/play-services-base-8.4.0.aar" />
                             <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-maps/8.4.0/play-services-maps-8.4.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar" />
                             <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-basement/8.4.0/play-services-basement-8.4.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/23.1.1/recyclerview-v7-23.1.1.aar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/app" />
@@ -1879,23 +1872,23 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/spinner_when_element.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/WhenAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/RouteAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/HttpRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Places.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Route.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_route.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/map_dialog.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/card_train.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/card_subway.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/RouteActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/card_bus.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/card_onfoot.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Route.java" />
       </list>
     </option>
   </component>
@@ -1913,8 +1906,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="796" />
+    <option name="x" value="4" />
+    <option name="width" value="1276" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1940,7 +1934,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1979,24 +1973,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Общежития ВШЭ" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2051,17 +2027,17 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="Mani&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/AndroidManifest.xml&#10;build&#9;FILE&#9;file:///Users/vmax/hsedorms/app/build.gradle&#10;onCre&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#onCreate&#10;onCreate&#9;PSI&#9;JAVA://android.view.View.OnCreateContextMenuListener&#10;Rout&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/RouteActivity.java&#10;Route&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/api/Route.java&#10;View&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_route.xml&#10;route&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_route.xml&#10;vi&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_route.xml&#10;Rou&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/RouteActivity.java&#10;ca&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/card_bus.xml&#10;Ro&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/RouteActivity.java&#10;buil&#9;FILE&#9;file:///Users/vmax/hsedorms/app/build.gradle&#10;oncl&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#onClick&#10;TOD&#9;FILE&#9;file:///Users/vmax/hsedorms/TODO&#10;Vi&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/RouteActivity.java&#10;Bus&#9;PSI&#9;JAVA://vmax.hsedorms.api.Route.Bus&#10;Main&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/MainActivity.java&#10;When&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/api/WhenAdapter.java&#10;Params&#9;PSI&#9;JAVA://vmax.hsedorms.api.Interactor.Params&#10;Pa&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/api/PlaceAdapter.java&#10;Para&#9;PSI&#9;JAVA://vmax.hsedorms.api.Interactor.Params&#10;Param&#9;PSI&#9;JAVA://vmax.hsedorms.api.Interactor.Params&#10;Mai&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/MainActivity.java&#10;buid&#9;PSI&#9;JAVA://com.sun.xml.internal.rngom.dt.builtin.BuiltinDatatypeBuilder&#10;buld&#9;PSI&#9;JAVA://javax.management.openmbean.TabularData&#10;Ma&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/MainActivity.java&#10;ac&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_main.xml&#10;main&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/MainActivity.java&#10;act&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_main.xml&#10;update&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#updateDepartureView&#10;Place&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/Places.java&#10;And&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/AndroidManifest.xml&#10;strin&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/values/strings.xml&#10;view&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_view_route.xml&#10;TODO&#9;FILE&#9;file:///Users/vmax/hsedorms/TODO" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="4100c79d44047165" />
+    <property name="SearchEverywhereHistoryKey" value="onClick&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#onClick&#10;onCLic&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#onClick&#10;onClic&#9;PSI&#9;JAVA://null#onClick&#10;updateDe&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#updateDepartureView&#10;onCLick&#9;PSI&#9;JAVA://android.content.DialogInterface.OnClickListener&#10;handleArrival&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#handleArrival&#10;Manif&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/AndroidManifest.xml&#10;Mani&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/AndroidManifest.xml&#10;build&#9;FILE&#9;file:///Users/vmax/hsedorms/app/build.gradle&#10;onCre&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#onCreate&#10;onCreate&#9;PSI&#9;JAVA://android.view.View.OnCreateContextMenuListener&#10;Rout&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/RouteActivity.java&#10;Route&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/api/Route.java&#10;View&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_route.xml&#10;route&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_route.xml&#10;vi&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_route.xml&#10;Rou&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/RouteActivity.java&#10;ca&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/card_bus.xml&#10;Ro&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/RouteActivity.java&#10;buil&#9;FILE&#9;file:///Users/vmax/hsedorms/app/build.gradle&#10;oncl&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#onClick&#10;TOD&#9;FILE&#9;file:///Users/vmax/hsedorms/TODO&#10;Vi&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/RouteActivity.java&#10;Bus&#9;PSI&#9;JAVA://vmax.hsedorms.api.Route.Bus&#10;Main&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/MainActivity.java&#10;When&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/api/WhenAdapter.java&#10;Params&#9;PSI&#9;JAVA://vmax.hsedorms.api.Interactor.Params&#10;Pa&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/api/PlaceAdapter.java&#10;Para&#9;PSI&#9;JAVA://vmax.hsedorms.api.Interactor.Params&#10;Param&#9;PSI&#9;JAVA://vmax.hsedorms.api.Interactor.Params&#10;Mai&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/MainActivity.java&#10;buid&#9;PSI&#9;JAVA://com.sun.xml.internal.rngom.dt.builtin.BuiltinDatatypeBuilder&#10;buld&#9;PSI&#9;JAVA://javax.management.openmbean.TabularData&#10;Ma&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/MainActivity.java&#10;ac&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_main.xml&#10;main&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/MainActivity.java&#10;act&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_main.xml&#10;update&#9;PSI&#9;JAVA://vmax.hsedorms.MainActivity#updateDepartureView&#10;Place&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/java/vmax/hsedorms/Places.java&#10;And&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/AndroidManifest.xml&#10;strin&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/values/strings.xml&#10;view&#9;FILE&#9;file:///Users/vmax/hsedorms/app/src/main/res/layout/activity_view_route.xml&#10;TODO&#9;FILE&#9;file:///Users/vmax/hsedorms/TODO" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="00db763c3778d4ed" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5X_API_23" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="164" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="70" />
@@ -2088,6 +2064,10 @@
   <component name="RecentsManager">
     <key name="android.template.packageName">
       <recent name="vmax.hsedorms" />
+    </key>
+    <key name="android.template.parentActivityClass">
+      <recent name="vmax.hsedorms.MainActivity" />
+      <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="vmax.hsedorms.api" />
@@ -2172,6 +2152,31 @@
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="app" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
       <envs />
       <method />
     </configuration>
@@ -2323,7 +2328,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454575127244</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Now we have Showcase for startup &amp; cleanup Toast showing">
+      <created>1454757807620</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1454757807620</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2336,7 +2347,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="796" extended-state="0" />
+    <frame x="4" y="0" width="1276" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32794118" sideWeight="0.4918919" order="6" side_tool="false" content_ui="tabs" />
@@ -2347,20 +2358,20 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3985294" sideWeight="0.28756756" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32058823" sideWeight="0.6962162" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32456142" sideWeight="0.6962162" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32794118" sideWeight="0.6988636" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3382353" sideWeight="0.6216216" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3377193" sideWeight="0.6923077" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.48295453" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32853717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32794118" sideWeight="0.5081081" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25282714" sideWeight="0.48866856" order="0" side_tool="false" content_ui="combo" x="736" y="59" width="211" height="681" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32794118" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25202593" sideWeight="0.48866856" order="0" side_tool="false" content_ui="combo" x="736" y="59" width="211" height="681" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32748538" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940048" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3985294" sideWeight="0.2681081" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3377193" sideWeight="0.30769232" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2529976" sideWeight="0.51133144" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3985294" sideWeight="0.6962162" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2394,66 +2405,16 @@
     <MESSAGE value="who needs commit messages anyway" />
     <MESSAGE value="new icon for floating button" />
     <MESSAGE value="make use of Picasso &amp; MaterialShowcaseView" />
-    <option name="LAST_COMMIT_MESSAGE" value="make use of Picasso &amp; MaterialShowcaseView" />
+    <MESSAGE value="Now we have Showcase for startup &amp; cleanup Toast showing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now we have Showcase for startup &amp; cleanup Toast showing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="50" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#onClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCheckedChanged#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#isOnline#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#isOnline#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#7670#7671#0" expanded="true" />
-            <element signature="e#7706#7707#0" expanded="true" />
-            <element signature="docComment;method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onConnectionFailed#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onConnected#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#showDepartureChooserDialog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#handleArrival#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRestoreInstanceState#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#14762#14778#0" expanded="true" />
-            <element signature="e#15041#15062#0" expanded="true" />
-            <element signature="e#15330#15349#0" expanded="true" />
-            <element signature="e#15614#15630#0" expanded="true" />
-            <element signature="e#15888#15902#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/src.zip!/javax/management/openmbean/TabularData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2566,22 +2527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2599,11 +2544,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_maps_navigation.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_maps_navigation.png">
@@ -2648,6 +2588,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6705069">
           <caret line="21354" column="21" selection-start-line="21354" selection-start-column="21" selection-end-line="21354" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Places.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="67" selection-start-line="71" selection-start-column="67" selection-end-line="71" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="android-dummy:///Users/vmax/hsedorms/app/Translations Editor">
+      <provider selected="true" editor-type-id="string-resource-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_train.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -2663,37 +2639,264 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/map_dialog.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_subway.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        <state vertical-scroll-proportion="-7.3448277">
+          <caret line="43" column="54" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_onfoot.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+        <state vertical-scroll-proportion="-6.3103447">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/widget/TextView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding />
+          <caret line="269" column="16" selection-start-line="269" selection-start-column="16" selection-end-line="269" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#380970#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#26586#26587#0" expanded="false" />
+            <element signature="e#26621#26622#0" expanded="false" />
+            <element signature="e#63358#63359#0" expanded="false" />
+            <element signature="e#63386#63387#0" expanded="false" />
+            <element signature="e#63531#63532#0" expanded="false" />
+            <element signature="e#63558#63559#0" expanded="false" />
+            <element signature="e#64096#64097#0" expanded="false" />
+            <element signature="e#64124#64125#0" expanded="false" />
+            <element signature="e#64246#64247#0" expanded="false" />
+            <element signature="e#64283#64284#0" expanded="false" />
+            <element signature="e#65170#65171#0" expanded="false" />
+            <element signature="e#65200#65201#0" expanded="false" />
+            <element signature="e#65358#65359#0" expanded="false" />
+            <element signature="e#65392#65393#0" expanded="false" />
+            <element signature="e#70320#70321#0" expanded="false" />
+            <element signature="e#70352#70353#0" expanded="false" />
+            <element signature="e#72139#72140#0" expanded="false" />
+            <element signature="e#72177#72178#0" expanded="false" />
+            <element signature="e#78447#78448#0" expanded="false" />
+            <element signature="e#78494#78495#0" expanded="false" />
+            <element signature="e#78647#78648#0" expanded="false" />
+            <element signature="e#78695#78696#0" expanded="false" />
+            <element signature="e#78848#78849#0" expanded="false" />
+            <element signature="e#78896#78897#0" expanded="false" />
+            <element signature="e#79043#79044#0" expanded="false" />
+            <element signature="e#79089#79090#0" expanded="false" />
+            <element signature="e#79345#79346#0" expanded="false" />
+            <element signature="e#79417#79418#0" expanded="false" />
+            <element signature="e#104215#104216#0" expanded="false" />
+            <element signature="e#104251#104252#0" expanded="false" />
+            <element signature="e#104886#104887#0" expanded="false" />
+            <element signature="e#104936#104937#0" expanded="false" />
+            <element signature="e#108087#108088#0" expanded="false" />
+            <element signature="e#108136#108137#0" expanded="false" />
+            <element signature="e#109075#109076#0" expanded="false" />
+            <element signature="e#109122#109123#0" expanded="false" />
+            <element signature="e#109329#109330#0" expanded="false" />
+            <element signature="e#109397#109398#0" expanded="false" />
+            <element signature="e#110354#110355#0" expanded="false" />
+            <element signature="e#110415#110416#0" expanded="false" />
+            <element signature="e#111520#111521#0" expanded="false" />
+            <element signature="e#111569#111570#0" expanded="false" />
+            <element signature="e#113255#113256#0" expanded="false" />
+            <element signature="e#113302#113303#0" expanded="false" />
+            <element signature="e#113747#113748#0" expanded="false" />
+            <element signature="e#113803#113804#0" expanded="false" />
+            <element signature="e#114043#114044#0" expanded="false" />
+            <element signature="e#114095#114096#0" expanded="false" />
+            <element signature="e#115025#115026#0" expanded="false" />
+            <element signature="e#115083#115084#0" expanded="false" />
+            <element signature="e#115974#115975#0" expanded="false" />
+            <element signature="e#116011#116012#0" expanded="false" />
+            <element signature="e#116859#116860#0" expanded="false" />
+            <element signature="e#116903#116904#0" expanded="false" />
+            <element signature="e#118986#118987#0" expanded="false" />
+            <element signature="e#119019#119020#0" expanded="false" />
+            <element signature="e#119214#119215#0" expanded="false" />
+            <element signature="e#119250#119251#0" expanded="false" />
+            <element signature="e#119864#119865#0" expanded="false" />
+            <element signature="e#119902#119903#0" expanded="false" />
+            <element signature="e#121940#121941#0" expanded="false" />
+            <element signature="e#121976#121977#0" expanded="false" />
+            <element signature="e#122206#122207#0" expanded="false" />
+            <element signature="e#122238#122239#0" expanded="false" />
+            <element signature="e#122466#122467#0" expanded="false" />
+            <element signature="e#122498#122499#0" expanded="false" />
+            <element signature="e#122734#122735#0" expanded="false" />
+            <element signature="e#122769#122770#0" expanded="false" />
+            <element signature="e#122956#122957#0" expanded="false" />
+            <element signature="e#122989#122990#0" expanded="false" />
+            <element signature="e#123299#123300#0" expanded="false" />
+            <element signature="e#123335#123336#0" expanded="false" />
+            <element signature="e#123751#123752#0" expanded="false" />
+            <element signature="e#123792#123793#0" expanded="false" />
+            <element signature="e#124161#124162#0" expanded="false" />
+            <element signature="e#124199#124200#0" expanded="false" />
+            <element signature="e#126083#126084#0" expanded="false" />
+            <element signature="e#126120#126121#0" expanded="false" />
+            <element signature="e#127584#127585#0" expanded="false" />
+            <element signature="e#127621#127622#0" expanded="false" />
+            <element signature="e#129184#129185#0" expanded="false" />
+            <element signature="e#129215#129216#0" expanded="false" />
+            <element signature="e#129362#129363#0" expanded="false" />
+            <element signature="e#129406#129407#0" expanded="false" />
+            <element signature="e#130744#130745#0" expanded="false" />
+            <element signature="e#130789#130790#0" expanded="false" />
+            <element signature="e#131617#131618#0" expanded="false" />
+            <element signature="e#131673#131674#0" expanded="false" />
+            <element signature="e#132437#132438#0" expanded="false" />
+            <element signature="e#132494#132495#0" expanded="false" />
+            <element signature="e#133231#133232#0" expanded="false" />
+            <element signature="e#133287#133288#0" expanded="false" />
+            <element signature="e#134135#134136#0" expanded="false" />
+            <element signature="e#134192#134193#0" expanded="false" />
+            <element signature="e#135932#135933#0" expanded="false" />
+            <element signature="e#135992#135993#0" expanded="false" />
+            <element signature="e#136676#136677#0" expanded="false" />
+            <element signature="e#136739#136740#0" expanded="false" />
+            <element signature="e#137412#137413#0" expanded="false" />
+            <element signature="e#137472#137473#0" expanded="false" />
+            <element signature="e#138155#138156#0" expanded="false" />
+            <element signature="e#138218#138219#0" expanded="false" />
+            <element signature="e#140237#140238#0" expanded="false" />
+            <element signature="e#140272#140273#0" expanded="false" />
+            <element signature="e#140628#140629#0" expanded="false" />
+            <element signature="e#140662#140663#0" expanded="false" />
+            <element signature="e#140898#140899#0" expanded="false" />
+            <element signature="e#140944#140945#0" expanded="false" />
+            <element signature="e#148002#148003#0" expanded="false" />
+            <element signature="e#148044#148045#0" expanded="false" />
+            <element signature="e#148310#148311#0" expanded="false" />
+            <element signature="e#148345#148346#0" expanded="false" />
+            <element signature="e#149532#149533#0" expanded="false" />
+            <element signature="e#149574#149575#0" expanded="false" />
+            <element signature="e#149918#149919#0" expanded="false" />
+            <element signature="e#149969#149970#0" expanded="false" />
+            <element signature="e#159810#159811#0" expanded="false" />
+            <element signature="e#159838#159839#0" expanded="false" />
+            <element signature="e#159868#159869#0" expanded="false" />
+            <element signature="e#159902#159903#0" expanded="false" />
+            <element signature="e#177694#177695#0" expanded="false" />
+            <element signature="e#177756#177757#0" expanded="false" />
+            <element signature="e#181597#181598#0" expanded="false" />
+            <element signature="e#181628#181629#0" expanded="false" />
+            <element signature="e#192381#192382#0" expanded="false" />
+            <element signature="e#192444#192445#0" expanded="false" />
+            <element signature="e#192684#192685#0" expanded="false" />
+            <element signature="e#192751#192752#0" expanded="false" />
+            <element signature="e#192811#192812#0" expanded="false" />
+            <element signature="e#192878#192879#0" expanded="false" />
+            <element signature="e#203618#203619#0" expanded="false" />
+            <element signature="e#203642#203643#0" expanded="false" />
+            <element signature="e#213193#213194#0" expanded="false" />
+            <element signature="e#213260#213261#0" expanded="false" />
+            <element signature="e#239470#239471#0" expanded="false" />
+            <element signature="e#239531#239532#0" expanded="false" />
+            <element signature="e#239565#239566#0" expanded="false" />
+            <element signature="e#239624#239625#0" expanded="false" />
+            <element signature="e#240604#240605#0" expanded="false" />
+            <element signature="e#240632#240633#0" expanded="false" />
+            <element signature="e#254218#254219#0" expanded="false" />
+            <element signature="e#254281#254282#0" expanded="false" />
+            <element signature="e#255890#255891#0" expanded="false" />
+            <element signature="e#255924#255925#0" expanded="false" />
+            <element signature="e#280789#280790#0" expanded="false" />
+            <element signature="e#280847#280848#0" expanded="false" />
+            <element signature="e#281924#281925#0" expanded="false" />
+            <element signature="e#281985#281986#0" expanded="false" />
+            <element signature="e#282146#282147#0" expanded="false" />
+            <element signature="e#282205#282206#0" expanded="false" />
+            <element signature="e#283079#283080#0" expanded="false" />
+            <element signature="e#283114#283115#0" expanded="false" />
+            <element signature="e#287254#287255#0" expanded="false" />
+            <element signature="e#287304#287305#0" expanded="false" />
+            <element signature="e#287733#287734#0" expanded="false" />
+            <element signature="e#287775#287776#0" expanded="false" />
+            <element signature="e#287981#287982#0" expanded="false" />
+            <element signature="e#288014#288015#0" expanded="false" />
+            <element signature="e#311201#311202#0" expanded="false" />
+            <element signature="e#311270#311271#0" expanded="false" />
+            <element signature="e#311807#311808#0" expanded="false" />
+            <element signature="e#311836#311837#0" expanded="false" />
+            <element signature="e#323535#323536#0" expanded="false" />
+            <element signature="e#323563#323564#0" expanded="false" />
+            <element signature="e#324521#324522#0" expanded="false" />
+            <element signature="e#324585#324586#0" expanded="false" />
+            <element signature="e#326644#326645#0" expanded="false" />
+            <element signature="e#326691#326692#0" expanded="false" />
+            <element signature="e#352080#352081#0" expanded="false" />
+            <element signature="e#352139#352140#0" expanded="false" />
+            <element signature="e#352164#352165#0" expanded="false" />
+            <element signature="e#352223#352224#0" expanded="false" />
+            <element signature="e#352817#352818#0" expanded="false" />
+            <element signature="e#352849#352850#0" expanded="false" />
+            <element signature="e#363777#363778#0" expanded="false" />
+            <element signature="e#363805#363806#0" expanded="false" />
+            <element signature="e#365330#365331#0" expanded="false" />
+            <element signature="e#365372#365373#0" expanded="false" />
+            <element signature="e#365460#365461#0" expanded="false" />
+            <element signature="e#365487#365488#0" expanded="false" />
+            <element signature="e#365579#365580#0" expanded="false" />
+            <element signature="e#365619#365620#0" expanded="false" />
+            <element signature="e#367778#367779#0" expanded="false" />
+            <element signature="e#367819#367820#0" expanded="false" />
+            <element signature="e#369104#369105#0" expanded="false" />
+            <element signature="e#369161#369162#0" expanded="false" />
+            <element signature="e#369215#369216#0" expanded="false" />
+            <element signature="e#369274#369275#0" expanded="false" />
+            <element signature="e#370331#370332#0" expanded="false" />
+            <element signature="e#370369#370370#0" expanded="false" />
+            <element signature="e#370408#370409#0" expanded="false" />
+            <element signature="e#370459#370460#0" expanded="false" />
+            <element signature="e#370513#370514#0" expanded="false" />
+            <element signature="e#370579#370580#0" expanded="false" />
+            <element signature="e#374344#374345#0" expanded="false" />
+            <element signature="e#374382#374383#0" expanded="false" />
+            <element signature="e#377663#377664#0" expanded="false" />
+            <element signature="e#377706#377707#0" expanded="false" />
+            <element signature="e#377735#377736#0" expanded="false" />
+            <element signature="e#377773#377774#0" expanded="false" />
+            <element signature="e#377809#377810#0" expanded="false" />
+            <element signature="e#377854#377855#0" expanded="false" />
+            <element signature="e#377894#377895#0" expanded="false" />
+            <element signature="e#377945#377946#0" expanded="false" />
+            <element signature="e#377982#377983#0" expanded="false" />
+            <element signature="e#378064#378065#0" expanded="false" />
+            <element signature="e#378095#378096#0" expanded="false" />
+            <element signature="e#378152#378153#0" expanded="false" />
+            <element signature="e#378183#378184#0" expanded="false" />
+            <element signature="e#378240#378241#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_bus.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="256" column="15" selection-start-line="256" selection-start-column="15" selection-end-line="256" selection-end-column="15" />
+        <state vertical-scroll-proportion="-0.62068963">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -2706,145 +2909,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Places.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="67" selection-start-line="71" selection-start-column="67" selection-end-line="71" selection-end-column="67" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="android-dummy:///Users/vmax/hsedorms/app/Translations Editor">
-      <provider selected="true" editor-type-id="string-resource-editor">
-        <state />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="62" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
+          <folding>
+            <element signature="e#505#538#0" expanded="true" />
+            <element signature="e#849#882#0" expanded="true" />
+            <element signature="e#907#942#0" expanded="true" />
+            <element signature="e#968#1003#0" expanded="true" />
+            <element signature="e#1027#1060#0" expanded="true" />
+            <element signature="e#1440#1459#0" expanded="true" />
+            <element signature="e#1481#1501#0" expanded="true" />
+            <element signature="e#1799#1826#0" expanded="true" />
+            <element signature="e#2335#2349#0" expanded="true" />
+            <element signature="e#2646#2679#0" expanded="true" />
+            <element signature="e#3032#3065#0" expanded="true" />
+            <element signature="e#3385#3418#0" expanded="true" />
+            <element signature="e#3697#3730#0" expanded="true" />
+            <element signature="e#4088#4107#0" expanded="true" />
+            <element signature="e#4408#4425#0" expanded="true" />
+            <element signature="e#4766#4788#0" expanded="true" />
+            <element signature="e#5134#5167#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/content/DialogInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="111" column="14" selection-start-line="111" selection-start-column="14" selection-end-line="111" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_maps_navigation.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/map_dialog.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.379311">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+        <state vertical-scroll-proportion="-4.137931">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2222223">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        <state vertical-scroll-proportion="-9.444445">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_train.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6896553">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state vertical-scroll-proportion="-7.2222223">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
           <folding>
-            <element signature="e#535#568#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_bus.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.586207">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#531#564#0" expanded="true" />
+            <element signature="docComment;method#isOnline#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#isOnline#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onItemSelected#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#7569#7570#0" expanded="true" />
+            <element signature="e#7605#7606#0" expanded="true" />
+            <element signature="method#onConnectionSuspended#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onConnectionFailed#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onConnected#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onSaveInstanceState#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#usageShowcase#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/RouteActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.5555556">
+          <caret line="126" column="43" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
           <folding>
-            <element signature="e#3026#3054#0" expanded="true" />
+            <element signature="e#4910#5615#0" expanded="true" />
+            <element signature="e#5614#5615#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Interactor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <caret line="231" column="12" selection-start-line="231" selection-start-column="12" selection-end-line="231" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/api/Route.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.912037">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="method#Subway#0;class#Subway#0;class#Route#0" expanded="false" />
-            <element signature="method#Train#0;class#Train#0;class#Route#0" expanded="false" />
             <element signature="method#pyDateTimeToJoda#0;class#Route#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/vmax/hsedorms/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="354" column="28" selection-start-line="354" selection-start-column="28" selection-end-line="354" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#onClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onClick#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCheckedChanged#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#isOnline#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#isOnline#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#7670#7671#0" expanded="true" />
-            <element signature="e#7706#7707#0" expanded="true" />
-            <element signature="docComment;method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#updateDepartureView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onConnectionFailed#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onConnected#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#showDepartureChooserDialog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#handleArrival#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRestoreInstanceState#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#14762#14778#0" expanded="true" />
-            <element signature="e#15041#15062#0" expanded="true" />
-            <element signature="e#15330#15349#0" expanded="true" />
-            <element signature="e#15614#15630#0" expanded="true" />
-            <element signature="e#15888#15902#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_subway.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7586207">
-          <caret line="43" column="54" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="54" />
-          <folding>
-            <element signature="e#530#563#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_onfoot.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.962963">
-          <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-          <folding>
-            <element signature="e#528#561#0" expanded="true" />
           </folding>
         </state>
       </provider>

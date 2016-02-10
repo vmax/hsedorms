@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity
 
     FloatingActionButton fabGo;
     Button departureIsIncorrect;
+    Button swapDestinations;
 
     GoogleApiClient googleApiClient;
 
@@ -103,12 +104,10 @@ public class MainActivity extends AppCompatActivity
         switch (msg.what)
         {
             case LOCATION_IS_SET:
-                Log.d("hsedorms/geoMessageQueue", "location set");
                 handleDeparture();
                 handleArrival();
                 break;
             case LOCATION_IS_NOT_SET:
-                Log.d("hsedorms/geoMessageQueue", "location is not set");
                 showDepartureChooserDialog();
                 handleDeparture();
                 handleArrival();
@@ -118,16 +117,12 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-     * Handles the clicks on two buttons in the MainActivity
-     * @param v the button (fabGo || departureIsIncorrect)
+     * Handles the clicks on three buttons in the MainActivity
+     * @param v the button (fabGo || departureIsIncorrect || swapDestinations)
      */
     @Override public void onClick(View v) {
         if (fabGo == v)
         {
-            Log.d("hsedorms", "Params:");
-            Log.d("hsedorms", "pDeparture: " + pDeparture.apiName);
-            Log.d("hsedorms", "pArrival: " + pArrival.apiName);
-            // TODO: start RouteActivity
             if (!isOnline())
             {
                 AlertDialog dialog = new AlertDialog.Builder(this)
@@ -156,11 +151,17 @@ public class MainActivity extends AppCompatActivity
         {
             showDepartureChooserDialog();
         }
+        else if (swapDestinations == v) // TODO: test the behaviour!
+        {
+            Places.Place oldDeparture = pDeparture;
+            pDeparture = pArrival;
+            updateDepartureView();
+            handleArrival(oldDeparture);
+        }
     }
 
 
     @Override public void onClick(DialogInterface dialog, int which) {
-        Log.d("hsedorms", "onClick on Dialog");
         Places.Place oldDeparture = pDeparture;
         pDeparture = dialogAdapter.getItem(which);
 
@@ -305,15 +306,7 @@ public class MainActivity extends AppCompatActivity
 
     public void handleDeparture()
     {
-        // do we have location?
-        if (lastKnownLocation == null)
-        {
-            // no
-            Log.d("hsedorms", "no last location");
-          //  showDepartureChooserDialog();
-
-        }
-        else
+        if (lastKnownLocation != null)
         {
             // TODO: or get from SavedPreferences?
             pDeparture = Places.getNearestPlace(lastKnownLocation);
@@ -321,10 +314,9 @@ public class MainActivity extends AppCompatActivity
         }
 
         arrivalSelector.performItemClick(arrivalSelector.getChildAt(0), 0, arrivalAdapter.getItemId(0));
-
     }
 
-    public void handleArrival()
+    public void handleArrival(Places.Place... placeToSet)
     {
         if (Arrays.asList(Places.Edus).contains(pDeparture))
         {
@@ -339,10 +331,18 @@ public class MainActivity extends AppCompatActivity
         }
 
         arrivalAdapter.notifyDataSetChanged();
-        arrivalSelector.performItemClick(arrivalSelector.getChildAt(0), 0, arrivalAdapter.getItemId(0));
-        arrivalSelector.setSelection(0);
-        pArrival = arrivalAdapter.getItem(0);
-        Log.d("hsedorms", "new arrival is " + pArrival.apiName);
+        if (placeToSet.length == 0) {
+            arrivalSelector.performItemClick(arrivalSelector.getChildAt(0), 0, arrivalAdapter.getItemId(0));
+            arrivalSelector.setSelection(0);
+            pArrival = arrivalAdapter.getItem(0);
+        }
+        else
+        {
+            int placePosition = arrivalAdapter.getPosition(placeToSet[0]);
+            arrivalSelector.performItemClick(arrivalSelector.getChildAt(placePosition), 0, arrivalAdapter.getItemId(placePosition));
+            arrivalSelector.setSelection(placePosition);
+            pArrival = placeToSet[0];
+        }
     }
 
     @Override
@@ -416,6 +416,9 @@ public class MainActivity extends AppCompatActivity
         dialogAdapter = new PlaceAdapter(this, R.layout.spinner_element, Arrays.asList(Places.AllPlaces));
         dialogAdapter.setDropDownViewResource(R.layout.spinner_element);
 
+        swapDestinations = (Button) findViewById(R.id.swapDestinations);
+        swapDestinations.setOnClickListener(this);
+
         ArrayList<Interactor.When> now = Interactor.getTimes(true);
 
         if (now.isEmpty())
@@ -457,7 +460,7 @@ public class MainActivity extends AppCompatActivity
                         .setContentText(R.string.sc_departure)
                         .setDismissOnTouch(true)
                         .build());
-
+        // TODO write showcase about swapbutton
         sequence.addSequenceItem(
                 new MaterialShowcaseView.Builder(this)
                         .setTarget(arrivalSelector)

@@ -61,7 +61,7 @@ public class Route {
                 this.departure = pyDateTimeToJoda(busObject.getJSONObject("departure"));
             } catch (JSONException ex)
             {
-                Log.d("hsedorms", ":JSONException/Bus " + ex.getMessage());
+
             }
         }
     }
@@ -145,7 +145,7 @@ public class Route {
 
         } catch (JSONException ex)
         {
-            Log.d("hsedorms", ":JSONException/Route " + ex.getMessage());
+
         }
     }
 

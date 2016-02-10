@@ -48,13 +48,34 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         />
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/detectedLocationIsWrong"
-        android:id="@+id/departureIsIncorrect"
-        android:gravity="right"
-        style="@style/Widget.AppCompat.Button.Borderless"/>
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:weightSum="2">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/swapDestinations"
+            android:text="@string/swap"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detectedLocationIsWrong"
+            android:id="@+id/departureIsIncorrect"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -67,8 +88,9 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/arrivalSelector"/>
-       <!-- style="@android:style/Widget.DeviceDefault.Spinner" -->
+        android:id="@+id/arrivalSelector"
+        android:layout_margin="@dimen/activity_vertical_margin"/>
+
 
     <info.hoang8f.android.segmented.SegmentedGroup
         xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
