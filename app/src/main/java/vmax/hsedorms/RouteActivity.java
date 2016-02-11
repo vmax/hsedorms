@@ -145,7 +145,6 @@ public class RouteActivity extends AppCompatActivity {
         {
             cardsContainer.addView(v);
         }
-
     }
 
 
