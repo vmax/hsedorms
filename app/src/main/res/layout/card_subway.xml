@@ -11,11 +11,23 @@
         android:layout_height="match_parent"
         android:layout_margin="@dimen/activity_vertical_margin">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/subway"
+            android:scaleType="centerInside"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:id="@+id/subway$icon" />
+
         <TextView
             android:text="Белорусская"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/subway$_from"
+            android:layout_toRightOf="@id/subway$icon"
             style="?android:attr/textAppearanceLarge"/>
 
         <TextView
@@ -24,6 +36,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/subway$_to"
             android:layout_below="@+id/subway$_from"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_toRightOf="@id/subway$icon"
             style="?android:attr/textAppearanceLarge"/>
 
         <TextView
@@ -39,6 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/subway$arrival"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/subway$departure"
             style="?android:attr/textAppearanceMedium"/>
