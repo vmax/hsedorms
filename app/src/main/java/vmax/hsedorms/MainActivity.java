@@ -147,11 +147,11 @@ public class MainActivity extends AppCompatActivity
             }
 
         }
-        else if (departureIsIncorrect == v)
+        else if (departureIsIncorrect == v || tDeparture == v)
         {
             showDepartureChooserDialog();
         }
-        else if (swapDestinations == v) // TODO: test the behaviour!
+        else if (swapDestinations == v)
         {
             Places.Place oldDeparture = pDeparture;
             pDeparture = pArrival;
@@ -388,6 +388,7 @@ public class MainActivity extends AppCompatActivity
         rootCordinatorLayout = (CoordinatorLayout)findViewById(R.id.rootCoordinatorLayout);
 
         tDeparture = (TextView) findViewById(R.id.departure);
+        tDeparture.setOnClickListener(this);
         dateSelector = (SegmentedGroup)findViewById(R.id.dateSelector);
         dateSelector.setOnCheckedChangeListener(this);
 

@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/subway$_to"
             android:layout_below="@+id/subway$_from"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/card_margin"
             android:layout_toRightOf="@id/subway$icon"
             style="?android:attr/textAppearanceLarge"/>
 
@@ -53,10 +53,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/subway$arrival"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            style="?android:attr/textAppearanceMedium"
+            android:layout_alignTop="@+id/subway$_to"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/subway$departure"
-            style="?android:attr/textAppearanceMedium"/>
+            android:layout_alignParentEnd="true" />
 
 
 

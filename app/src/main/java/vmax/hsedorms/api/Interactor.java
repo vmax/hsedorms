@@ -1,6 +1,10 @@
 package vmax.hsedorms.api;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -115,6 +119,11 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
             result.add(lesson6);
             result.add(lesson7);
             result.add(lesson8);
+
+            for (When w : result)
+            {
+                w.when_param = "tomorrow";
+            }
         }
         return result;
     }
@@ -222,7 +231,6 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
 
             }
 
-
             resultJSON = new JSONObject(stringBuilder.toString());
             response = new Route(resultJSON);
             return response;
@@ -252,9 +260,20 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
         downloadProgress.setVisibility(View.GONE);
         if (route == null)
         {
-            // TODO: display that we've got errors
             AlertDialog.Builder builder = new AlertDialog.Builder(this.context);
             builder.setTitle("Проблема");
+            builder.setPositiveButton("Связаться с разработчиком", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent i = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:vmax0770+dubki@gmail.com"));
+                    try {
+                        context.startActivity(Intent.createChooser(i, "Отправить:"));
+                    } catch (ActivityNotFoundException ex)
+                    {
+                        ; // don't you fucking have an email client?!
+                    }
+                }
+            });
             builder.setMessage("Большая проблема!");
             builder.create().show();
 

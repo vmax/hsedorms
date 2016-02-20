@@ -55,17 +55,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/train$departure"
+            style="?android:attr/textAppearanceMedium"
+            android:layout_alignTop="@+id/train$title"
             android:layout_alignParentRight="true"
-            style="?android:attr/textAppearanceMedium"/>
+            android:layout_alignParentEnd="true" />
 
         <TextView
             android:text="9:20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/train$arrival"
+            style="?android:attr/textAppearanceMedium"
+            android:layout_alignBottom="@+id/train$title"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/train$departure"
-            style="?android:attr/textAppearanceMedium"/>
+            android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
 

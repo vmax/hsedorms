@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/bus$_to"
             android:layout_below="@+id/bus$_from"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/card_margin"
             android:layout_toRightOf="@id/bus$icon"
             style="?android:attr/textAppearanceLarge"/>
 
@@ -48,17 +48,21 @@
             android:layout_height="wrap_content"
             android:id="@+id/bus$departure"
             android:layout_alignParentRight="true"
-            style="?android:attr/textAppearanceMedium"/>
+            android:layout_alignParentEnd="true"
+            style="?android:attr/textAppearanceMedium"
+            android:layout_alignBottom="@id/bus$_from"
+            />
 
         <TextView
             android:text="9:20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/bus$arrival"
+            style="?android:attr/textAppearanceMedium"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_alignParentEnd="true"
             android:layout_below="@+id/bus$departure"
-            style="?android:attr/textAppearanceMedium"/>
+            android:layout_alignTop="@id/bus$_to"/>
 
 
 

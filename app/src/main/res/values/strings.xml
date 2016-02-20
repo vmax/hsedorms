@@ -14,5 +14,6 @@
     <string name="sc_arrival">Выбери пункт назначения из списка</string>
     <string name="sc_date">Можно запланировать поездку заранее.\n\nЗавтра ты не проспишь первую пару!</string>
     <string name="sc_go">Поехали!</string>
+    <string name="tap_to_map">коснитесь,\n чтобы увидеть карту</string>
 
 </resources>

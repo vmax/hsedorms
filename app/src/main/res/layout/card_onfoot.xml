@@ -24,6 +24,8 @@
         android:layout_marginRight="@dimen/activity_vertical_margin"
         android:id="@+id/onfoot$icon" />
 
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,21 +34,37 @@
             android:layout_toRightOf="@id/onfoot$icon"
             style="?android:attr/textAppearanceLarge"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/onfoot$footer"
+                android:text="@string/tap_to_map"
+                android:layout_below="@id/onfoot$time"
+                android:layout_toRightOf="@id/onfoot$icon"
+                android:layout_marginTop="@dimen/card_margin"
+                style="?android:attr/textAppearanceSmall"
+                android:textStyle="italic"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+
             android:id="@+id/onfoot$departure"
             android:text="9:00"
-            style="?android:attr/textAppearanceMedium"/>
+            style="?android:attr/textAppearanceMedium"
+            android:layout_alignBottom="@+id/onfoot$time"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+
             android:layout_below="@id/onfoot$departure"
+            android:layout_alignTop="@id/onfoot$footer"
             android:id="@+id/onfoot$arrival"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="10:00"
             style="?android:attr/textAppearanceMedium"/>
 
