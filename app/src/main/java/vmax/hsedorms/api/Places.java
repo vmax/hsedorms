@@ -85,7 +85,6 @@ public class Places {
         return null;
     }
 
-    // TODO: do we need to check that distance is reasonable (<1km)?
     public static Place getNearestPlace(Location currentLocation)
     {
         float distance = Float.MAX_VALUE;

@@ -23,23 +23,19 @@ public class Route {
     public String _from;
     public String _to;
 
-    public class Subway
-    {
+    public class Subway {
         public DateTime arrival;
         public DateTime departure;
         public String from;
         public String to;
 
-        public Subway(JSONObject subwayObject)
-        {
-            try
-            {
+        public Subway(JSONObject subwayObject) {
+            try {
                 this.from = subwayObject.getString("from");
                 this.to = subwayObject.getString("to");
                 this.arrival = pyDateTimeToJoda(subwayObject.getJSONObject("arrival"));
                 this.departure = pyDateTimeToJoda(subwayObject.getJSONObject("departure"));
-            } catch (JSONException ex)
-            {
+            } catch (JSONException ex) {
 
             }
         }
@@ -51,16 +47,13 @@ public class Route {
         public String from;
         public String to;
 
-        public Bus(JSONObject busObject)
-        {
-            try
-            {
+        public Bus(JSONObject busObject) {
+            try {
                 this.from = busObject.getString("from");
                 this.to = busObject.getString("to");
                 this.arrival = pyDateTimeToJoda(busObject.getJSONObject("arrival"));
                 this.departure = pyDateTimeToJoda(busObject.getJSONObject("departure"));
-            } catch (JSONException ex)
-            {
+            } catch (JSONException ex) {
 
             }
         }
@@ -72,16 +65,14 @@ public class Route {
         public String title;
         public String to; // station to exit on
 
-        public Train(JSONObject trainObject)
-        {
-            try{
+        public Train(JSONObject trainObject) {
+            try {
                 this.arrival = pyDateTimeToJoda(trainObject.getJSONObject("arrival"));
                 this.departure = pyDateTimeToJoda(trainObject.getJSONObject("departure"));
                 this.stops = trainObject.getString("stops");
                 this.title = trainObject.getString("title");
                 this.to = trainObject.getString("to");
-            } catch (JSONException ex)
-            {
+            } catch (JSONException ex) {
 
             }
         }
@@ -92,22 +83,19 @@ public class Route {
         public String mapsrc;
         public int time; // in seconds
 
-        public Onfoot(JSONObject onfootObject)
-        {
-            try
-            {
+        public Onfoot(JSONObject onfootObject) {
+            try {
                 this.arrival = pyDateTimeToJoda(onfootObject.getJSONObject("arrival"));
                 this.departure = pyDateTimeToJoda(onfootObject.getJSONObject("departure"));
                 this.mapsrc = onfootObject.getString("mapsrc");
                 this.time = onfootObject.getJSONObject("time").getInt("seconds");
-            } catch (JSONException ex)
-            {
+            } catch (JSONException ex) {
 
             }
         }
     }
 
-    public static DateTime pyDateTimeToJoda (JSONObject pyDateTime) {
+    public static DateTime pyDateTimeToJoda(JSONObject pyDateTime) {
         int day, month, year, minute, hour;
         try {
             day = pyDateTime.getInt("day");
@@ -119,15 +107,12 @@ public class Route {
 
             return new DateTime().withDate(year, month, day).withTime(hour, minute, 0, 0);
 
-        } catch (JSONException ex)
-        {
-            ;
+        } catch (JSONException ex) {;
         }
         return null;
     }
 
-    public Route (JSONObject jsonObject)
-    {
+    public Route(JSONObject jsonObject) {
         try {
             this._from = jsonObject.getString("_from");
             this._to = jsonObject.getString("_to");
@@ -143,8 +128,7 @@ public class Route {
             this.subway = new Subway(jsonObject.getJSONObject("subway"));
             this.onfoot = new Onfoot(jsonObject.getJSONObject("onfoot"));
 
-        } catch (JSONException ex)
-        {
+        } catch (JSONException ex) {
 
         }
     }

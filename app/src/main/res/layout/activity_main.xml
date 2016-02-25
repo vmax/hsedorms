@@ -35,9 +35,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:text="@string/youAreNear"
+        android:text="@string/Tdeparture"
         android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceMedium"/>
+        style="@style/Base.TextAppearance.AppCompat.Title" />
 
     <TextView
         android:layout_width="match_parent"
@@ -45,8 +45,7 @@
         android:id="@+id/departure"
         android:gravity="center"
         android:text="@string/detectingLocation"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        />
+        style="@style/Base.TextAppearance.AppCompat.Subhead" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,8 +61,7 @@
             android:text="@string/swap"
             android:layout_gravity="left"
             android:layout_weight="1"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            />
+            style="@style/Widget.AppCompat.Button.Borderless" />
 
         <Button
             android:layout_width="wrap_content"
@@ -81,16 +79,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activity_vertical_margin"
-        android:text="Пункт назначения:"
+        android:text="@string/Tarrival"
         android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceMedium"/>
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        style="@style/Base.TextAppearance.AppCompat.Title" />
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/arrivalSelector"
-        android:layout_margin="@dimen/activity_vertical_margin"/>
-
+></Spinner>
 
     <info.hoang8f.android.segmented.SegmentedGroup
         xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
@@ -147,8 +145,7 @@
         android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/timeSelector"
-        style="@android:style/Widget.DeviceDefault.Spinner"/>
+        android:id="@+id/timeSelector"/>
 
 
 </LinearLayout>

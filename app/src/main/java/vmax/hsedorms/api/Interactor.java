@@ -12,6 +12,7 @@ import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeComparator;
@@ -70,7 +71,6 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
 
 
     // FIXME: return only in reasonable time (+1:30)
-    // FIXME: onlyAfterCurrentTime ->> tomorrow
     public static ArrayList<When> getTimes(boolean onlyAfterCurrentTime)
     {
         ArrayList<When> result = new ArrayList<When>();
@@ -122,7 +122,8 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
 
             for (When w : result)
             {
-                w.when_param = "tomorrow";
+                w.when = "tomorrow";
+                w.joda_when_param = w.joda_when_param.plusDays(1);
             }
         }
         return result;
@@ -228,7 +229,6 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
                 while ((line = reader.readLine()) != null) {
                     stringBuilder.append(line);
                 }
-
             }
 
             resultJSON = new JSONObject(stringBuilder.toString());
@@ -245,9 +245,8 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
             // may happen
         } catch (JSONException ex)
         {
+            // happens when no route is available
             Log.d("hsedorms/Interactor", ":JSONException " + ex.getMessage());
-
-            // should not happen but who knows
         }
         finally{
             return response;
@@ -271,6 +270,7 @@ public class Interactor extends AsyncTask<Interactor.Params, Void, Route> {
                     } catch (ActivityNotFoundException ex)
                     {
                         ; // don't you fucking have an email client?!
+                        Toast.makeText(context,context.getString(R.string.contact_email),Toast.LENGTH_LONG).show();
                     }
                 }
             });

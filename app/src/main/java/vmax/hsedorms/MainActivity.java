@@ -15,6 +15,7 @@ import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -33,9 +34,12 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 
+import org.joda.time.DateTime;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 
 import info.hoang8f.android.segmented.SegmentedGroup;
@@ -55,8 +59,8 @@ public class MainActivity extends AppCompatActivity
                     SegmentedGroup.OnCheckedChangeListener,
                     View.OnClickListener,
                     AdapterView.OnItemSelectedListener,
-        DialogInterface.OnClickListener,
-        Handler.Callback
+                    DialogInterface.OnClickListener,
+                    Handler.Callback
 {
 
     final int LOCATION_IS_SET = 1;
@@ -99,8 +103,7 @@ public class MainActivity extends AppCompatActivity
     GoogleApiClient googleApiClient;
 
     // handles message that location is set by geolocation
-    @Override
-    public boolean handleMessage(Message msg) {
+    @Override public boolean handleMessage(Message msg) {
         switch (msg.what)
         {
             case LOCATION_IS_SET:
@@ -108,7 +111,7 @@ public class MainActivity extends AppCompatActivity
                 handleArrival();
                 break;
             case LOCATION_IS_NOT_SET:
-                showDepartureChooserDialog();
+                showDepartureChooserDialog(false);
                 handleDeparture();
                 handleArrival();
                 break;
@@ -125,13 +128,14 @@ public class MainActivity extends AppCompatActivity
         {
             if (!isOnline())
             {
-                AlertDialog dialog = new AlertDialog.Builder(this)
-                        .setTitle("Проблема")
-                        .setMessage("Судя по всему, интернет-соединение недоступно")
-                        .setCancelable(true)
-                        .create();
-                dialog.setCanceledOnTouchOutside(true);
-                dialog.show();
+                Snackbar.make(rootCordinatorLayout,R.string.no_internet,Snackbar.LENGTH_LONG)
+                        .setAction(R.string.no_internet_settings, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent=new Intent(Settings.ACTION_DATA_ROAMING_SETTINGS);
+                                startActivity(intent);
+                            }
+                        }).show();
             }
             else
             {
@@ -149,7 +153,7 @@ public class MainActivity extends AppCompatActivity
         }
         else if (departureIsIncorrect == v || tDeparture == v)
         {
-            showDepartureChooserDialog();
+            showDepartureChooserDialog(true);
         }
         else if (swapDestinations == v)
         {
@@ -174,8 +178,12 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    /**
+     * User changed 'When' parameter in UI
+     * @param group redunant; we have only one radio group
+     * @param checkedId id of the option that has been selected
+     */
     @Override public void onCheckedChanged(RadioGroup group, int checkedId) {
-        // TODO: update When in MainActivity
         ArrayList<Interactor.When> resultWhenList;
         switch (checkedId)
         {
@@ -189,10 +197,17 @@ public class MainActivity extends AppCompatActivity
 
                 whenAdapter.notifyDataSetChanged();
 
+                when = whenAdapter.getItem(0);
+                timeSelector.performItemClick(timeSelector.getChildAt(0), 0, whenAdapter.getItemId(0));
+                timeSelector.setSelection(0);
+
                 break;
             case R.id.dateNow:
                 timeSelectorTitle.setVisibility(View.GONE);
                 timeSelector.setVisibility(View.GONE);
+
+                when = new Interactor.When("now", "now");
+
                 break;
             case R.id.dateTomorrow:
                 timeSelectorTitle.setVisibility(View.VISIBLE);
@@ -203,13 +218,18 @@ public class MainActivity extends AppCompatActivity
                 whenList.addAll(resultWhenList);
 
                 whenAdapter.notifyDataSetChanged();
+
+                when = whenAdapter.getItem(0);
+                timeSelector.performItemClick(timeSelector.getChildAt(0), 0, whenAdapter.getItemId(0));
+                timeSelector.setSelection(0);
+
                 break;
         }
     }
 
     /**
      * Check if performing internet requests is reasonable
-     * @return if device is connecting or connecting
+     * @return if device is connected or connecting
      */
     public boolean isOnline() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -246,15 +266,16 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    // Couldn't connect to Google Location API
-    // Probably, there are no Google Play Services on the device
-    @Override
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+    /**
+     * Couldn't connect to Google Location API
+     * Probably, there are no Google Play Services on the device
+     * @param connectionResult not used
+     */
+    @Override public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         geoMessageQueue.sendEmptyMessage(LOCATION_IS_NOT_SET);
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (PackageManager.PERMISSION_GRANTED == grantResults[0])
         {
             try {
@@ -269,14 +290,12 @@ public class MainActivity extends AppCompatActivity
         {
             geoMessageQueue.sendEmptyMessage(LOCATION_IS_NOT_SET);
         }
-        else
-        {
+        else {
             geoMessageQueue.sendEmptyMessage(LOCATION_IS_SET);
         }
     }
 
-    @Override
-    public void onConnected(Bundle bundle) {
+    @Override public void onConnected(Bundle bundle) {
         int isPermitted = ContextCompat.checkSelfPermission(this, permission.ACCESS_FINE_LOCATION);
         if (PackageManager.PERMISSION_GRANTED == isPermitted) {
             lastKnownLocation = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
@@ -294,13 +313,13 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void showDepartureChooserDialog()
+    public void showDepartureChooserDialog(boolean cancelable)
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Где Вы?");
         builder.setAdapter(dialogAdapter, this);
         builder.setOnItemSelectedListener(this);
-        builder.setCancelable(false);
+        builder.setCancelable(cancelable);
         builder.create().show();
     }
 
@@ -314,6 +333,8 @@ public class MainActivity extends AppCompatActivity
         }
 
         arrivalSelector.performItemClick(arrivalSelector.getChildAt(0), 0, arrivalAdapter.getItemId(0));
+        arrivalSelector.setSelection(0);
+
     }
 
     public void handleArrival(Places.Place... placeToSet)
@@ -322,12 +343,18 @@ public class MainActivity extends AppCompatActivity
         {
             arrivalList.clear();
             arrivalList.addAll(Arrays.asList(Places.Dorms));
-
+            // departing from an edu, we don't support reverse routing, so hide unneeded buttons
+            dateNow.setChecked(true);
+            dateToday.setVisibility(View.GONE);
+            dateTomorrow.setVisibility(View.GONE);
         }
         else
         {
             arrivalList.clear();
             arrivalList.addAll(Arrays.asList(Places.Edus));
+            // departing from a dorm, we do support reverse routing, so show unneeded buttons
+            dateToday.setVisibility(View.VISIBLE);
+            dateTomorrow.setVisibility(View.VISIBLE);
         }
 
         arrivalAdapter.notifyDataSetChanged();
@@ -343,16 +370,16 @@ public class MainActivity extends AppCompatActivity
             arrivalSelector.setSelection(placePosition);
             pArrival = placeToSet[0];
         }
+
+
     }
 
-    @Override
-    protected void onStart() {
+    @Override protected void onStart() {
         googleApiClient.connect();
         super.onStart();
     }
 
-    @Override
-    protected void onDestroy() {
+    @Override protected void onDestroy() {
         googleApiClient.disconnect();
         super.onDestroy();
     }
@@ -363,13 +390,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     // TODO: rtfm & implement
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+    @Override protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -428,6 +453,14 @@ public class MainActivity extends AppCompatActivity
         }
 
 
+        DateTime tomorrow = DateTime.now().plusDays(1);
+        if (tomorrow.getDayOfWeek() == 7) // handling weekend problem
+        {
+            tomorrow = tomorrow.plusDays(1);
+        }
+        dateTomorrow.setText(tomorrow.dayOfWeek().getAsText());
+
+
         whenList = new ArrayList<Interactor.When>();
         whenAdapter = new WhenAdapter(this, R.layout.spinner_element, whenList);
         whenAdapter.setDropDownViewResource(R.layout.spinner_element);
@@ -438,8 +471,12 @@ public class MainActivity extends AppCompatActivity
         geoMessageQueue = new Handler(this);
 
 
+
     }
 
+    /**
+     * Shows the onboarding usage showcase
+     */
     protected void usageShowcase()
     {
         ShowcaseConfig config = new ShowcaseConfig();
@@ -461,7 +498,6 @@ public class MainActivity extends AppCompatActivity
                         .setContentText(R.string.sc_departure)
                         .setDismissOnTouch(true)
                         .build());
-        // TODO write showcase about swapbutton
         sequence.addSequenceItem(
                 new MaterialShowcaseView.Builder(this)
                         .setTarget(arrivalSelector)

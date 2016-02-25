@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HSE Dorms</string>
+    <string name="dateToday">Today</string>
+    <string name="dateNow">Now</string>
+    <string name="dateTomorrow">Tomorrow</string>
+    <string name="Tdeparture">Departure:</string>
+    <string name="Tarrival">Destination:</string>
+    <string name="detectingLocation">detecting location</string>
+    <string name="swap">Swap</string>
+    <string name="detectedLocationIsWrong">Choose</string>
+    <string name="train_to">to %s</string>
+    <string name="sc_main">
+        Привет, студент Вышки!\n\nЖивёшь в Одинцово или Дубках?\n\nЗапускай приложение перед выходом из учебного корпуса или общаги\n\nМы спланируем твой маршрут.</string>
+    <string name="sc_departure">Ближайший к тебе корпус или общежитие определяются автоматически</string>
+    <string name="sc_arrival">Выбери пункт назначения из списка</string>
+    <string name="sc_date">Можно запланировать поездку заранее.\n\nЗавтра ты не проспишь первую пару!</string>
+    <string name="tap_to_map">touch\n to see the map</string>
+    <string name="map">Map</string>
+
+    <string name="onfoot_time">%d min. on feet</string>
+</resources>

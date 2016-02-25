@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="HintText" parent="TextAppearance.Design.Hint">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">#BBB</item>
+    </style>
 </resources>

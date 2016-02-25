@@ -9,10 +9,12 @@ import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -38,10 +40,9 @@ public class RouteActivity extends AppCompatActivity {
     Interactor.Params params;
     LinearLayout cardsContainer;
 
-    public void displayRoute(final @NonNull Route route)
+    public void displayRoute(@NonNull final Route route)
     {
         final LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
 
         ArrayList<View> cards = new ArrayList<>();
 
@@ -70,17 +71,30 @@ public class RouteActivity extends AppCompatActivity {
         if (route.train != null)
         {
             CardView train$card = (CardView)inflater.inflate(R.layout.card_train, cardsContainer, false);
-            TextView train$title = (TextView)train$card.findViewById(R.id.train$title);
             TextView train$to = (TextView)train$card.findViewById(R.id.train$to);
-            TextView train$stops = (TextView)train$card.findViewById(R.id.train$stops);
+
             TextView train$departure = (TextView)train$card.findViewById(R.id.train$departure);
             TextView train$arrival = (TextView)train$card.findViewById(R.id.train$arrival);
 
-            train$title.setText(route.train.title);
-            train$to.setText(getString(R.string.train_to) + " " + route.train.to);
-            train$stops.setText("остановки: " + route.train.stops);
+           // train$title.setText(route.train.title);
+            train$to.setText(String.format(getString(R.string.train_to), route.train.to));
+           //
             train$departure.setText(route.train.departure.toString("HH:mm"));
             train$arrival.setText(route.train.arrival.toString("HH:mm"));
+
+            train$card.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final AlertDialog ad = new AlertDialog.Builder(RouteActivity.this)
+                            .setTitle(route.train.title)
+                            .setMessage(String.format(getString(R.string.train_dialog_message), route.train.stops))
+                            .create();
+
+                    ad.setCanceledOnTouchOutside(true);
+                    ad.show();
+
+                }
+            });
 
             cards.add(train$card);
         }
@@ -108,7 +122,7 @@ public class RouteActivity extends AppCompatActivity {
             TextView onfoot$arrival = (TextView)onfoot$card.findViewById(R.id.onfoot$arrival);
             TextView onfoot$departure = (TextView)onfoot$card.findViewById(R.id.onfoot$departure);
 
-            onfoot$time.setText("Пешком: " + String.valueOf(route.onfoot.time / 60) + " минут");
+            onfoot$time.setText(String.format(getString(R.string.onfoot_time), route.onfoot.time / 60));
             onfoot$departure.setText(route.onfoot.departure.toString("HH:mm"));
             onfoot$arrival.setText(route.onfoot.arrival.toString("HH:mm"));
 
@@ -116,8 +130,10 @@ public class RouteActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     final AlertDialog ad = new AlertDialog.Builder(RouteActivity.this)
-                            .setTitle("Карта")
+                            .setTitle(R.string.map)
                             .create();
+
+
 
                     View dialogView = inflater.inflate(R.layout.map_dialog, null);
                     ImageView mapView = (ImageView)dialogView.findViewById(R.id.map);
@@ -127,6 +143,7 @@ public class RouteActivity extends AppCompatActivity {
                             .into(mapView);
 
                     ad.setView(dialogView);
+                    ad.setCanceledOnTouchOutside(true);
                     ad.show();
 
                 }
@@ -140,6 +157,14 @@ public class RouteActivity extends AppCompatActivity {
         {
             Collections.reverse(cards);
         }
+
+        // Route title
+        View title = inflater.inflate(R.layout.spinner_element, cardsContainer, false);
+        ((TextView)title.findViewById(R.id.text))
+                .setText(String.format(getString(R.string.route_title),
+                        Places.findPlaceByApiName(route._from).humanReadableName,
+                        Places.findPlaceByApiName(route._to).humanReadableName));
+        cards.add(0, title);
 
         for (View v : cards)
         {

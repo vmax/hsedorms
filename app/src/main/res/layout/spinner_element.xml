@@ -4,4 +4,4 @@
     android:layout_height="wrap_content"
     android:id="@+id/text"
     android:gravity="center"
-    android:textAppearance="?android:attr/textAppearanceLarge"/>
+    style="@style/TextAppearance.AppCompat.Headline"/>
