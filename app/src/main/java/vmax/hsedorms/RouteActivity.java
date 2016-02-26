@@ -35,22 +35,58 @@ import vmax.hsedorms.api.Interactor;
 import vmax.hsedorms.api.Places;
 import vmax.hsedorms.api.Route;
 
-public class RouteActivity extends AppCompatActivity {
+public class RouteActivity extends AppCompatActivity implements View.OnClickListener {
 
     Interactor.Params params;
     LinearLayout cardsContainer;
+    ArrayList<View> cards;
+    Route route;
+    LayoutInflater inflater;
 
-    public void displayRoute(@NonNull final Route route)
+    CardView onfoot$card, train$card;
+
+    public void onClick (View v)
     {
-        final LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        if (onfoot$card == v)
+        {
+            AlertDialog ad = new AlertDialog.Builder(RouteActivity.this)
+                    .setTitle(R.string.map)
+                    .create();
 
-        ArrayList<View> cards = new ArrayList<>();
+
+
+            View dialogView = inflater.inflate(R.layout.map_dialog, null);
+            ImageView mapView = (ImageView)dialogView.findViewById(R.id.map);
+
+            Picasso.with(RouteActivity.this)
+                    .load(route.onfoot.mapsrc)
+                    .into(mapView);
+
+            ad.setView(dialogView);
+            ad.setCanceledOnTouchOutside(true);
+            ad.show();
+        }
+        else if (train$card == v)
+        {
+            final AlertDialog ad = new AlertDialog.Builder(RouteActivity.this)
+                    .setTitle(route.train.title)
+                    .setMessage(String.format(getString(R.string.train_dialog_message), route.train.stops))
+                    .create();
+
+            ad.setCanceledOnTouchOutside(true);
+            ad.show();
+        }
+    }
+
+    public void displayRoute(@NonNull final Route _route)
+    {
+        route = _route;
+        inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        cards = new ArrayList<>();
 
         /* firstly we add view in a natural order (bus? => train? => subway => onfoot)
             then we check route.departure_place and reverse the list with views if needed (if departure_place  == 'edu')
           */
-
-
 
         if (route.bus != null)
         {
@@ -70,31 +106,18 @@ public class RouteActivity extends AppCompatActivity {
 
         if (route.train != null)
         {
-            CardView train$card = (CardView)inflater.inflate(R.layout.card_train, cardsContainer, false);
+            train$card = (CardView)inflater.inflate(R.layout.card_train, cardsContainer, false);
             TextView train$to = (TextView)train$card.findViewById(R.id.train$to);
 
             TextView train$departure = (TextView)train$card.findViewById(R.id.train$departure);
             TextView train$arrival = (TextView)train$card.findViewById(R.id.train$arrival);
 
-           // train$title.setText(route.train.title);
             train$to.setText(String.format(getString(R.string.train_to), route.train.to));
-           //
+
             train$departure.setText(route.train.departure.toString("HH:mm"));
             train$arrival.setText(route.train.arrival.toString("HH:mm"));
 
-            train$card.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    final AlertDialog ad = new AlertDialog.Builder(RouteActivity.this)
-                            .setTitle(route.train.title)
-                            .setMessage(String.format(getString(R.string.train_dialog_message), route.train.stops))
-                            .create();
-
-                    ad.setCanceledOnTouchOutside(true);
-                    ad.show();
-
-                }
-            });
+            train$card.setOnClickListener(this);
 
             cards.add(train$card);
         }
@@ -117,7 +140,7 @@ public class RouteActivity extends AppCompatActivity {
 
         if(route.onfoot != null)
         {
-            CardView onfoot$card = (CardView)inflater.inflate(R.layout.card_onfoot, cardsContainer, false);
+            onfoot$card = (CardView)inflater.inflate(R.layout.card_onfoot, cardsContainer, false);
             TextView onfoot$time = (TextView)onfoot$card.findViewById(R.id.onfoot$time);
             TextView onfoot$arrival = (TextView)onfoot$card.findViewById(R.id.onfoot$arrival);
             TextView onfoot$departure = (TextView)onfoot$card.findViewById(R.id.onfoot$departure);
@@ -126,28 +149,7 @@ public class RouteActivity extends AppCompatActivity {
             onfoot$departure.setText(route.onfoot.departure.toString("HH:mm"));
             onfoot$arrival.setText(route.onfoot.arrival.toString("HH:mm"));
 
-            onfoot$card.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    final AlertDialog ad = new AlertDialog.Builder(RouteActivity.this)
-                            .setTitle(R.string.map)
-                            .create();
-
-
-
-                    View dialogView = inflater.inflate(R.layout.map_dialog, null);
-                    ImageView mapView = (ImageView)dialogView.findViewById(R.id.map);
-
-                    Picasso.with(RouteActivity.this)
-                            .load(route.onfoot.mapsrc)
-                            .into(mapView);
-
-                    ad.setView(dialogView);
-                    ad.setCanceledOnTouchOutside(true);
-                    ad.show();
-
-                }
-            });
+            onfoot$card.setOnClickListener(this);
 
             cards.add(onfoot$card);
         }

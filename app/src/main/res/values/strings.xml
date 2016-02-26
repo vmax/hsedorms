@@ -23,7 +23,7 @@
     <string name="train_dialog_message">Остановки: %s</string>
 
 
-    <string name="route_title">%1$s — %2$s</string>
+    <string name="route_title" translatable="false">%1$s — %2$s</string>
     <string name="no_internet">Интернет-соединение недоступно</string>
     <string name="no_internet_settings">Настройки</string>
 

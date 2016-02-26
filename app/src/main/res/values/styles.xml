@@ -12,4 +12,8 @@
         <item name="android:textStyle">italic</item>
         <item name="android:textColor">#BBB</item>
     </style>
+
+    <style name="HseTheme" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="colorAccent">@color/accent_material_light_1</item>
+    </style>
 </resources>

@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HSE Dorms</string>
-    <string name="dateToday">Today</string>
+    <string name="Tarrival">To:</string>
+    <string name="Tdeparture">Going from:</string>
+    <string name="contact_email">Contact me on vmax0770@gmail.com with subject "Dubki"</string>
     <string name="dateNow">Now</string>
+    <string name="dateToday">Today</string>
     <string name="dateTomorrow">Tomorrow</string>
-    <string name="Tdeparture">Departure:</string>
-    <string name="Tarrival">Destination:</string>
+    <string name="detectedLocationIsWrong">Select</string>
     <string name="detectingLocation">detecting location</string>
-    <string name="swap">Swap</string>
-    <string name="detectedLocationIsWrong">Choose</string>
-    <string name="train_to">to %s</string>
-    <string name="sc_main">
-        Привет, студент Вышки!\n\nЖивёшь в Одинцово или Дубках?\n\nЗапускай приложение перед выходом из учебного корпуса или общаги\n\nМы спланируем твой маршрут.</string>
-    <string name="sc_departure">Ближайший к тебе корпус или общежитие определяются автоматически</string>
-    <string name="sc_arrival">Выбери пункт назначения из списка</string>
-    <string name="sc_date">Можно запланировать поездку заранее.\n\nЗавтра ты не проспишь первую пару!</string>
-    <string name="tap_to_map">touch\n to see the map</string>
     <string name="map">Map</string>
-
-    <string name="onfoot_time">%d min. on feet</string>
+    <string name="no_internet">Internet connection is unavailable</string>
+    <string name="no_internet_settings">Settings</string>
+    <string name="onfoot_time">%d minutes</string>
+    <string name="sc_arrival">Choose your destination from the list</string>
+    <string name="sc_date">You can plan your trip in advance.\n\nNow you won\'t be late for early classes!</string>
+    <string name="sc_departure">Nearest dorm or education campus is detected automatically</string>
+    <string name="sc_go">Go!</string>
+    <string name="sc_main">Hi, HSE student!\n\nDo you live in a dorm in Odintsovo or Dubki?\n\nStart this app before you exit education building or dorm\n\nWe will plan your trip.</string>
+    <string name="swap">Swap</string>
+    <string name="train_dialog_message">Stops: %s</string>
+    <string name="train_to">to %s</string>
 </resources>

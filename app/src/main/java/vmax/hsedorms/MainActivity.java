@@ -132,8 +132,13 @@ public class MainActivity extends AppCompatActivity
                         .setAction(R.string.no_internet_settings, new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent intent=new Intent(Settings.ACTION_DATA_ROAMING_SETTINGS);
-                                startActivity(intent);
+                                Intent intent=new Intent(Settings.ACTION_WIRELESS_SETTINGS);
+                                try {
+                                    startActivity(intent);
+                                } catch (Exception e)
+                                {
+                                    ;
+                                }
                             }
                         }).show();
             }
