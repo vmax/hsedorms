@@ -19,7 +19,7 @@ public class Places {
     public final static Place aeroport, tekstilshiki, strogino, myasnitskaya;
     public final static Place vavilova, izmailovo, st_basmannaya, shabolovskaya;
     public final static Place petrovka, paveletskaya, ilyinka, trehsvyat_b;
-    public final static Place trehsvyat_m, hitra, gnezdo;
+    public final static Place trehsvyat_m, hitra, gnezdo, ordynka;
     public final static Place dubki, odintsovo;
     public final static Place[] Edus, Dorms,  AllPlaces;
 
@@ -42,13 +42,14 @@ public class Places {
         trehsvyat_m = new Place("trehsvyat_m", "Малый Трёхсвятительский переулок",Pair.create(55.754091f, 37.646552f));
         hitra = new Place("hitra", "Хитровский переулок",Pair.create(55.753858f, 37.645519f));
         gnezdo = new Place("gnezdo", "Малый Гнездниковский переулок", Pair.create(55.76169f, 37.60611f));
+        ordynka = new Place("ordynka", "Малая Ордынка", Pair.create(55.737512f, 37.626304f));
 
         dubki = new Place("dubki", "Дубки", Pair.create(55.660404f, 37.228889f));
         odintsovo = new Place("odintsovo", "Одинцово", Pair.create(55.669854f, 37.27968f));
 
 
         Edus = new Place[] {
-                aeroport,tekstilshiki, strogino,myasnitskaya,
+                aeroport,tekstilshiki, ordynka, strogino,myasnitskaya,
                 vavilova, izmailovo, st_basmannaya, shabolovskaya,
                 petrovka, paveletskaya, ilyinka, trehsvyat_b,
                 trehsvyat_m, hitra, gnezdo
@@ -57,7 +58,7 @@ public class Places {
         Dorms = new Place[] {dubki,odintsovo};
 
         AllPlaces = new Place[] {
-                aeroport,tekstilshiki, strogino,myasnitskaya,
+                aeroport,tekstilshiki, ordynka, strogino,myasnitskaya,
                 vavilova, izmailovo, st_basmannaya, shabolovskaya,
                 petrovka, paveletskaya, ilyinka, trehsvyat_b,
                 trehsvyat_m, hitra, gnezdo, dubki, odintsovo
