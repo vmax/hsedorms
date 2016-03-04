@@ -1,12 +1,11 @@
 package vmax.hsedorms;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.text.Html;
@@ -22,20 +21,14 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.concurrent.ExecutionException;
 
 import vmax.hsedorms.api.Interactor;
 import vmax.hsedorms.api.Places;
 import vmax.hsedorms.api.Route;
 
-public class RouteActivity extends AppCompatActivity implements View.OnClickListener {
+public class RouteActivity extends Activity implements View.OnClickListener {
 
     Interactor.Params params;
     LinearLayout cardsContainer;

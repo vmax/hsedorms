@@ -21,7 +21,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.Manifest.permission;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -36,21 +35,16 @@ import com.google.android.gms.location.LocationServices;
 
 import org.joda.time.DateTime;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
-import java.util.List;
 
 import info.hoang8f.android.segmented.SegmentedGroup;
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
 import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
-import uk.co.deanwild.materialshowcaseview.shape.Shape;
 import vmax.hsedorms.api.Interactor;
 import vmax.hsedorms.api.PlaceAdapter;
 import vmax.hsedorms.api.Places;
-import vmax.hsedorms.api.Route;
 import vmax.hsedorms.api.WhenAdapter;
 
 public class MainActivity extends AppCompatActivity
