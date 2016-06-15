@@ -25,8 +25,13 @@
 
     <string name="route_title" translatable="false">%1$s — %2$s</string>
     <string name="no_internet">Интернет-соединение недоступно</string>
-    <string name="no_internet_settings">Настройки</string>
+    <string name="no_internet_settings">Настройки</string>'
 
+    <string name="byebye_title">Проект закрыт</string>
+    <string name="byebye_message">К сожалению, пользователей было недостаточно, чтобы мне хватало мотивации поддерживать его.
+        Классные ребята перестали поставлять актуальное расписание автобусов и некоторое время оно обновлялось вручную</string>
+    <string name="byebye_bots">На данный момент Вам смогут помочь Telegram-боты <a href="http://telegram.me/dubkibus_bot">@dubkibus_bot</a> и
+    <a href="http://telegram.me/dubkitrains_bot">@dubkitrains_bot</a></string>
 
 
 </resources>

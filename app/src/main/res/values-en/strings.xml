@@ -21,4 +21,10 @@
     <string name="swap">Swap</string>
     <string name="train_dialog_message">Stops: %s</string>
     <string name="train_to">to %s</string>
+
+    <string name="byebye_title">The project has been closed</string>
+    <string name="byebye_message">Unfortunately,
+        the number of users was not enough to motivate me enough to support it. Cool guys stopped to supply up-to-date bus schedule and for some time it has been updated manually</string>
+    <string name="byebye_bots">Why wouldn\'t you use Telegram bots <a href="http://telegram.me/dubkibus_bot">@dubkibus_bot</a> and
+    <a href="http://telegram.me/dubkitrains_bot">@dubkitrains_bot</a>?</string>
 </resources>

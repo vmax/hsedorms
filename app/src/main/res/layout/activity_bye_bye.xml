@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="vmax.hsedorms.ByeByeActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/byebye_iv"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/byebye_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_below="@id/byebye_iv"
+        android:id="@+id/byebye_title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/byebye_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_below="@id/byebye_title"
+        android:textAlignment="center"
+        android:id="@+id/byebye_message"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/byebye_bots"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_below="@id/byebye_message"
+        android:textAlignment="center"
+        android:id="@+id/byebye_bots"/>
+
+
+
+</RelativeLayout>
